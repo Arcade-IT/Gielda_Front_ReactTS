@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import WebFont from 'webfontloader';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import userReducer from './store/reducers/user'
+
+WebFont.load({
+    google: {
+        families: ['Lato:300,400,700', 'sans-serif']
+    }
+})
 
 declare global {
     interface Window {
@@ -27,7 +34,9 @@ const store = createStore(
 
 const app = (
     <Provider store={store}>
+        <React.StrictMode>
         <App />
+        </React.StrictMode>
     </Provider>
 )
 
