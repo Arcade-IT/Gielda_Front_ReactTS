@@ -1,6 +1,9 @@
 export const colorTheme = {
-    primaryBlack: '#1a1c20',
-    primaryDarkOrange: '#cf7500',
-    secondaryLightOrange: '#f0a500',
-    secondaryLightGray: '#f4f4f4'
-}
+    primaryDark: '#1a1c20',
+    primaryMedium: '#40454f',
+    primaryLight: '#4f5562',
+    primaryLightest: '#f4f4f4',
+    secondaryDark: '#cf7500',
+    secondaryMedium: '#ff9103',
+    secondaryLight: '#ffaf47',
+};
