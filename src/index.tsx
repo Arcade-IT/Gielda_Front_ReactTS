@@ -11,7 +11,7 @@ import userReducer from './store/reducers/user';
 
 WebFont.load({
     google: {
-        families: ['Lato:300,400,700', 'sans-serif'],
+        families: ['Oswald:300,400,700', 'sans-serif'],
     },
 });
 
