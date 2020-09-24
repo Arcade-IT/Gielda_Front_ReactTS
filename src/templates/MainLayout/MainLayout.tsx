@@ -7,7 +7,7 @@ import {
     Wrapper,
 } from './MainLayout.styled';
 import { ThemeProvider } from 'styled-components';
-import { colorTheme, shadowTheme } from '../../themes';
+import { colorTheme, shadowTheme, transitionTheme } from '../../themes';
 import Sidebar from '../../containers/Sidebar/Sidebar';
 import Modal from '../../components/UI/Modal/Modal';
 import Login from '../../containers/Login/Login';
@@ -16,6 +16,7 @@ import { useOutsideClick } from '../../hooks/useOutsideClick';
 
 const MainLayout: React.FC = (props) => {
     const [openModal, setOpenModal] = useState(false);
+    const [isModalLogin, setIsModalLogin] = useState(true);
 
     const modalRef: React.Ref<HTMLDivElement> = useRef(null);
 
@@ -23,31 +24,49 @@ const MainLayout: React.FC = (props) => {
         setOpenModal(false);
     });
 
+    const openLogin = () => {
+        setIsModalLogin(true);
+        setOpenModal(true);
+    };
+
+    const openSignup = () => {
+        setIsModalLogin(false);
+        setOpenModal(true);
+    };
+
     const closeLogin = () => {
         setOpenModal(false);
     };
 
     return (
         <ThemeProvider theme={colorTheme}>
-            <Wrapper>
-                <Modal open={openModal} ref={modalRef}>
-                    <Login />
-                </Modal>
-                <ThemeProvider theme={shadowTheme}>
-                    <Header>
-                        <LogoContainer>Logo</LogoContainer>
-                        <ButtonsContainer>
-                            Buttons: User, Settings, Notifications
-                        </ButtonsContainer>
-                    </Header>
-                </ThemeProvider>
-                <Sidebar />
-                <Main>
-                    <Dashboard toggleModal={() => setOpenModal(!openModal)} />
-                </Main>
-            </Wrapper>
+            <ThemeProvider theme={transitionTheme}>
+                <Wrapper>
+                    <Modal open={openModal} ref={modalRef}>
+                        <Login
+                            clickedCancel={closeLogin}
+                            isLogin={isModalLogin}
+                        />
+                    </Modal>
+                    <ThemeProvider theme={shadowTheme}>
+                        <Header>
+                            <LogoContainer>Logo</LogoContainer>
+                            <ButtonsContainer>
+                                Buttons: User, Settings, Notifications
+                            </ButtonsContainer>
+                        </Header>
+                    </ThemeProvider>
+                    <Sidebar />
+                    <Main>
+                        <Dashboard
+                            toggleLogin={() => openLogin()}
+                            toggleSignup={() => openSignup()}
+                        />
+                    </Main>
+                </Wrapper>
+            </ThemeProvider>
         </ThemeProvider>
     );
 };
 
-export default MainLayout;
+export default React.memo(MainLayout);

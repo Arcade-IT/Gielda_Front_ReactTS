@@ -12,7 +12,7 @@ export const Button = styled.button`
     text-transform: uppercase;
     background-color: ${(props) => props.theme.secondaryMedium};
     color: #fff;
-    transition: all 0.6s ease;
+    transition: ${(props) => props.theme.mediumSpeed};
     cursor: pointer;
     outline: none;
 

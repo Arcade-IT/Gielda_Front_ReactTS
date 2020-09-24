@@ -16,5 +16,5 @@ export const View = styled.div<BackdropProps>`
     left: 0;
     background-color: rgba(0, 0, 0, 0.4);
     opacity: ${(props) => (props.show ? '1' : '0')};
-    transition: all 0.6s ease;
+    transition: ${(props) => props.theme.mediumSpeed};
 `;

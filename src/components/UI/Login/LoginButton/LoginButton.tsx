@@ -1,8 +1,14 @@
 import React from 'react';
 import { Button } from './LoginButton.styled';
 
-const LoginButton: React.FC = (props) => {
-    return <Button>{props.children}</Button>;
+type LoginButtonProps = {
+    clicked?: () => void;
+};
+
+const LoginButton: React.FC<LoginButtonProps> = (props) => {
+    const { clicked } = props;
+
+    return <Button onClick={clicked}>{props.children}</Button>;
 };
 
 export default LoginButton;

@@ -1,17 +1,17 @@
 import React from 'react';
-import LoginButton from '../../components/UI/Login/LoginButton/LoginButton';
 
 type DashboardProps = {
-    toggleModal: () => void;
+    toggleLogin: () => void;
+    toggleSignup: () => void;
 };
 
 const Dashboard: React.FC<DashboardProps> = (props) => {
-    const { toggleModal } = props;
+    const { toggleLogin, toggleSignup } = props;
     return (
         <>
             Dashboard goes here.
-            <LoginButton />
-            <button onClick={toggleModal}>Toggle modal</button>
+            <button onClick={toggleLogin}>Toggle login</button>
+            <button onClick={toggleSignup}>Toggle signup</button>
         </>
     );
 };
