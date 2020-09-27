@@ -3,7 +3,7 @@ import MainLayout from '../../templates/MainLayout/MainLayout';
 import LandingPage from '../../Navigation/Pages/LandingPage/LandingPage';
 import HomePage from '../../Navigation/Pages/HomePage/HomePage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { routes } from '../../Navigation/Routes';
+import { routes } from '../../routes';
 
 const App: React.FC = () => {
     const { landingpage, homepage, mainlayout } = routes;
