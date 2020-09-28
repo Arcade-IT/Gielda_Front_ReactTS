@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Wrapper, Row, Warning } from './Login.styled';
+import { Wrapper, Row, Warning, LoginContainer, Text } from './Login.styled';
 import { CSSTransition } from 'react-transition-group';
 import LoginButton from '../../components/UI/Login/LoginButton/LoginButton';
 import LoginInput from '../../components/UI/Login/LoginInput/LoginInput';
 import { updateObject } from '../../shared/utility';
 import '../../transitions/transitions.css';
+import LoginImage from '../../components/UI/Login/LoginImage/LoginImage';
 
 type LoginProps = {
     clickedCancel(): void;
@@ -78,6 +79,12 @@ const Login: React.FC<LoginProps> = (props) => {
     const login = (
         <>
             <Row>
+                <Text>
+                    Please login, so you can access your account and all of our
+                    app's features.
+                </Text>
+            </Row>
+            <Row>
                 <LoginInput
                     name="email"
                     type="email"
@@ -102,6 +109,12 @@ const Login: React.FC<LoginProps> = (props) => {
 
     const signup = (
         <>
+            <Row>
+                <Text>
+                    To take full advantage of our app's features, please fill
+                    out below form to create your account.
+                </Text>
+            </Row>
             <Row>
                 <LoginInput
                     name="first name"
@@ -147,20 +160,23 @@ const Login: React.FC<LoginProps> = (props) => {
 
     return (
         <Wrapper>
-            <CSSTransition
-                in={warning.shown}
-                classNames="opacity"
-                timeout={400}
-                mountOnEnter
-                unmountOnExit
-            >
-                <Warning>{warning.message}</Warning>
-            </CSSTransition>
-            {isLogin ? login : signup}
-            <Row>
-                <LoginButton>Login</LoginButton>
-                <LoginButton clicked={clickedCancel}>Cancel</LoginButton>
-            </Row>
+            <LoginImage />
+            <LoginContainer>
+                <CSSTransition
+                    in={warning.shown}
+                    classNames="opacity"
+                    timeout={400}
+                    mountOnEnter
+                    unmountOnExit
+                >
+                    <Warning>{warning.message}</Warning>
+                </CSSTransition>
+                {isLogin ? login : signup}
+                <Row>
+                    <LoginButton>Login</LoginButton>
+                    <LoginButton clicked={clickedCancel}>Cancel</LoginButton>
+                </Row>
+            </LoginContainer>
         </Wrapper>
     );
 };

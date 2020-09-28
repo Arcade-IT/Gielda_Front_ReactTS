@@ -4,9 +4,16 @@ export const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+`;
+
+export const LoginContainer = styled.div`
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
 `;
 
@@ -15,6 +22,11 @@ export const Row = styled.div`
     display: flex;
     margin: 1rem 0;
     justify-content: space-evenly;
+`;
+
+export const Text = styled.p`
+    font-size: 1.6rem;
+    color: ${(props) => props.theme.primaryLightest};
 `;
 
 export const Warning = styled.p`
