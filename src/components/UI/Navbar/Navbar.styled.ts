@@ -105,7 +105,7 @@ export const NavItem = styled.li`
     }
 `;
 export const NavLink = styled(Link)`
-    height: 100%;
+    height: 110%;
     color: ${(props) => props.theme.primaryLightest};
     text-decoration: none;
     display: flex;
