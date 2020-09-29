@@ -1,6 +1,6 @@
 import React from 'react';
 import MainLayout from '../../templates/MainLayout/MainLayout';
-import LandingPage from '../../Navigation/Pages/LandingPage/LandingPage';
+import LandingPage from '../../Navigation/Pages/LandingPage/Navigation/LandingPage';
 import HomePage from '../../Navigation/Pages/HomePage/HomePage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { routes } from '../../routes';
