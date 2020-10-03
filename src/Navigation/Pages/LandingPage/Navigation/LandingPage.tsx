@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { colorTheme, shadowTheme, fontTheme } from '../../../../themes';
 import NBview from '../../../../components/UI/NBview/NBview';
 
-import Navbar from '../../../../components/UI/Navbar/Navbar';
+import Navbar from '../../../../components/UI/LPNavbar/Navbar';
 
 const Landingpage: React.FC = (props) => {
     return (
