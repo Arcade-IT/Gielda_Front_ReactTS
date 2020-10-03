@@ -44,7 +44,7 @@ export const InfoRowData: React.FC<{ data: dataInterface[] }> = (props) => {
                         <InfoColumnImage>
                             <ImgWrapper>
                                 <Img
-                                    src={require('../../../Navigation/Pages/LandingPage/staticData/images/logo192.png')}
+                                    src={require('../../../../../Navigation/Pages/LandingPage/staticData/images/logo192.png')}
                                 />
                             </ImgWrapper>
                         </InfoColumnImage>

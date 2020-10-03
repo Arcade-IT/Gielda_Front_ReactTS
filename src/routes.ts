@@ -1,5 +1,10 @@
 export const routes = {
-    landingpage: '/landingpage',
-    homepage: '/',
+    landingpage: '/',
+    homepage: '/home',
     mainlayout: '/mainlayout',
+    LPabout: '/landingPage/about',
+    LPcontact: '/landingPage/contact',
+    LPservices: '/landingPage/services',
+    LPapp: '/landingPage/app',
+    LPinfo: '/landingPage/info',
 };

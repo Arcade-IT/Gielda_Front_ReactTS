@@ -10,7 +10,7 @@ import {
     NavLink,
 } from './Navbar.styled';
 
-import Burger from '../../../icons/Hamburger/Hamburger';
+import Burger from '../../../../../icons/Hamburger/Hamburger';
 
 const Navbar: React.FC = (props) => {
     const [open, setOpen] = useState(false);
@@ -35,19 +35,19 @@ const Navbar: React.FC = (props) => {
                         <NavLink to="/">Home</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/landingPage">About</NavLink>
+                        <NavLink to="/landingPage/about">About</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/landingPage">Services</NavLink>
+                        <NavLink to="/landingPage/services">Services</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/landingPage">App</NavLink>
+                        <NavLink to="/landingPage/app">App</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/landingPage">Contact</NavLink>
+                        <NavLink to="/landingPage/contact">Contact</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/landingPage">More Info</NavLink>
+                        <NavLink to="/landingPage/info">More Info</NavLink>
                     </NavItem>
                 </MenuPlaceholder>
             </NavbarContainer>

@@ -2,9 +2,8 @@ import React from 'react';
 import { Wrapper } from './Landingpage.styled';
 import { ThemeProvider } from 'styled-components';
 import { colorTheme, shadowTheme, fontTheme } from '../../../../themes';
-import NBview from '../../../../components/UI/NBview/NBview';
 
-import Navbar from '../../../../components/UI/LPNavbar/Navbar';
+import Navbar from '../../../../components/UI/LandingPage/Home//LPNavbar/Navbar';
 
 const Landingpage: React.FC = (props) => {
     return (
@@ -13,7 +12,7 @@ const Landingpage: React.FC = (props) => {
                 <ThemeProvider theme={fontTheme}>
                     <Wrapper>
                         <Navbar />
-                        <NBview />
+                        {props.children}
                     </Wrapper>
                 </ThemeProvider>
             </ThemeProvider>
