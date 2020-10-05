@@ -48,6 +48,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const Heading = styled.h1`
+    padding-bottom: 0.1em;
     font-size: 3em;
     line-height: 1.1;
     margin-bottom: 0.2em;
@@ -57,6 +58,7 @@ export const Heading = styled.h1`
 `;
 
 export const Subtitle = styled.p`
+    padding-bottom: 0.1em;
     margin-bottom: 0.4em;
     font-size: 2em;
     font-weight: 400;
@@ -66,6 +68,7 @@ export const Subtitle = styled.p`
 `;
 
 export const Text = styled.p`
+    padding-bottom: 0.1em;
     margin-bottom: 0.2em;
     font-size: 2em;
     color: ${(props) => props.theme.primaryLightest};

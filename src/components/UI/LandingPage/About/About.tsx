@@ -49,7 +49,7 @@ const About: React.FC<AboutProps> = (props) => {
                                     dolor sit amet..", comes from a line in
                                     section 1.10.32.
                                 </Text>
-                                <ButtonJoin to="/landingpage/contact">
+                                <ButtonJoin to="/landingPage/contact">
                                     Contact us
                                 </ButtonJoin>
                             </TextWrapper>
