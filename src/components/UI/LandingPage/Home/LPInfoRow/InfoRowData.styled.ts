@@ -17,7 +17,7 @@ export const InfoRow = styled.div<InfoInterface>`
     background: ${(props) =>
         props.lightView ? props.theme.primaryDark : props.theme.primaryLighter};
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 900px) {
         margin: 2em 10em;
     }
 `;
@@ -27,13 +27,13 @@ export const InfoColumn = styled.div`
     max-width: 100%;
     justify-content: center;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
         max-width: 100%;
         flex-basis: 100%;
         display: flex;
         justify-content: center;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 900px) {
         margin-bottom: 1em;
         padding-left: 10em;
         padding-top: 5em;
@@ -46,7 +46,7 @@ export const InfoColumnImage = styled.div`
     justify-content: center;
     align-items: center;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
         max-width: 100%;
         flex-basis: 100%;
         display: flex;
@@ -59,7 +59,7 @@ export const TextWrapper = styled.div`
     padding-top: 0;
     padding-bottom: 5em;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
         padding-bottom: 4em;
         padding-top: 4em;
         padding-left: 4em;
@@ -73,7 +73,7 @@ export const ImgWrapper = styled.div`
     margin: 1em 0em;
     justify-content: center;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
         margin: 2em 0em;
     }
 `;
@@ -87,13 +87,15 @@ export const TopLine = styled.div`
 `;
 
 export const Img = styled.img`
-    padding-right: 0;
+    padding-right: 2em;
+    padding-left: 2em;
     border: 0;
     max-width: 100%;
     vertical-align: middle;
     display: inline-block;
     max-height: 90em;
-    min-height: 30em;
+    width: 100%;
+    height: auto;
 `;
 
 export const Heading = styled.h1`

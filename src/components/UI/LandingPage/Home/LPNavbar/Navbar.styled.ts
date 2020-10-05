@@ -46,7 +46,7 @@ export const MenuIconPlaceholder = styled.div`
     align-items: center;
     justify-content: center;
 
-    @media screen and (max-width: 961px) {
+    @media screen and (max-width: 900px) {
         display: flex;
     } ;
 `;
@@ -63,7 +63,7 @@ export const MenuPlaceholder = styled.ul<MenuProps>`
     list-style: none;
     text-align: center;
 
-    @media screen and (max-width: 961px) {
+    @media screen and (max-width: 900px) {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -95,7 +95,7 @@ export const NavItem = styled.li`
         transform: scale(1.1);
     }
 
-    @media screen and (max-width: 961px) {
+    @media screen and (max-width: 900px) {
         width: 100%;
 
         &:hover {
