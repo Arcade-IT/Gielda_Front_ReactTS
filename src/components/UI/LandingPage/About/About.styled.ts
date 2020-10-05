@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 export const MainContainer = styled.div`
     display: flex;
     width: 100%;
+    color: #fff;
+    padding: 2em;
 `;
 
 export const BoxContainer = styled.div`
@@ -15,17 +17,14 @@ export const BoxContainer = styled.div`
     background-color: ${(props) => props.theme.primaryDark};
     @media screen and (min-width: 900px) {
         flex-direction: row;
-
         margin: 2em 10em;
     }
     @media screen and (max-width: 900px) {
-        margin: 1em 2em;
         flex-direction: column;
     }
 `;
 
 export const ImageContainer = styled.div`
-    max-width: 76em;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -33,17 +32,27 @@ export const ImageContainer = styled.div`
     align-items: center;
     justify-content: center;
     padding: 4em;
+
+    @media screen and (max-width: 900px) {
+        padding: 1em;
+        background-color: red;
+    }
 `;
 
 export const TextWrapper = styled.div`
     display: flex;
     flex: 7;
     flex-direction: column;
-    padding: 5em;
     @media screen and (min-width: 900px) {
         padding-bottom: 4em;
         padding-top: 4em;
         padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    @media screen and (max-width: 900px) {
+        padding: 5em;
+        width: 100%;
     }
 `;
 
@@ -77,15 +86,19 @@ export const Text = styled.p`
 `;
 
 export const Img = styled.img`
-    padding-right: 2em;
-    padding-left: 2em;
     border: 0;
     max-width: 100%;
     vertical-align: middle;
     display: inline-block;
-    max-height: 90em;
     width: 100%;
     height: auto;
+
+    @media screen and (max-width: 900px) {
+        padding-bottom: 4em;
+        padding-top: 4em;
+        padding-right: 1em;
+        padding-left: 1em;
+    }
 `;
 
 export const ButtonJoin = styled(Link)`
@@ -99,6 +112,10 @@ export const ButtonJoin = styled(Link)`
     text-align: center;
     padding: 1em 1.1em;
     margin: 2em 0;
+
+    @media screen and (max-width: 900px) {
+        width: 100%;
+    }
 
     &:hover {
         opacity: 0.8;
