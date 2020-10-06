@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Wrapper, Row, Warning, LoginContainer, Text } from './Login.styled';
 import { CSSTransition } from 'react-transition-group';
 import LoginButton from '../../components/UI/Login/LoginButton/LoginButton';
@@ -6,6 +6,7 @@ import LoginInput from '../../components/UI/Login/LoginInput/LoginInput';
 import { updateObject } from '../../shared/utility';
 import '../../transitions/transitions.css';
 import LoginImage from '../../components/UI/Login/LoginImage/LoginImage';
+import axios from 'axios';
 
 type LoginProps = {
     clickedCancel(): void;
@@ -16,17 +17,17 @@ const Login: React.FC<LoginProps> = (props) => {
     const { clickedCancel, isLogin } = props;
     const [loginData, setLoginData] = useState({
         email: '',
-        password: '',
+        password: ''
     });
     const [signupData, setSignupData] = useState({
         firstName: '',
         lastName: '',
         email: '',
-        password: '',
+        password: ''
     });
     const [warning, setWarning] = useState({
         shown: false,
-        message: ' ',
+        message: ' '
     });
 
     const validateEmail = (email: string) => {
@@ -41,7 +42,7 @@ const Login: React.FC<LoginProps> = (props) => {
     const inputChangedHandler = (event: React.ChangeEvent, login?: boolean) => {
         const target = event.target as HTMLInputElement;
         const updatedData = updateObject(login ? loginData : signupData, {
-            [target.name]: target.value,
+            [target.name]: target.value
         });
 
         if (target.name === 'email') {
@@ -50,7 +51,7 @@ const Login: React.FC<LoginProps> = (props) => {
                     setWarning(
                         updateObject(warning, {
                             shown: true,
-                            message: 'Please enter valid email address.',
+                            message: 'Please enter valid email address.'
                         })
                     );
                 }
@@ -64,7 +65,7 @@ const Login: React.FC<LoginProps> = (props) => {
                         updateObject(warning, {
                             shown: true,
                             message:
-                                'Password must be at least 6 characters long.',
+                                'Password must be at least 6 characters long.'
                         })
                     );
                 }
@@ -74,6 +75,18 @@ const Login: React.FC<LoginProps> = (props) => {
         }
 
         login ? setLoginData(updatedData) : setSignupData(updatedData);
+    };
+
+    const registerSample = () => {
+        axios
+            .post('https://localhost:443/api/user/register', {
+                email: 'przemowiec@test.com',
+                firstName: 'Przemo',
+                lastName: 'Reducha',
+                password: 'twojaStara'
+            })
+            .then((response) => console.log(response))
+            .catch((error) => console.log(error));
     };
 
     const login = (
@@ -158,22 +171,25 @@ const Login: React.FC<LoginProps> = (props) => {
         </>
     );
 
+    const nodeRef = useRef(null);
+
     return (
         <Wrapper>
             <LoginImage />
             <LoginContainer>
                 <CSSTransition
+                    nodeRef={nodeRef}
                     in={warning.shown}
                     classNames="opacity"
                     timeout={400}
                     mountOnEnter
                     unmountOnExit
                 >
-                    <Warning>{warning.message}</Warning>
+                    <Warning ref={nodeRef}>{warning.message}</Warning>
                 </CSSTransition>
                 {isLogin ? login : signup}
                 <Row>
-                    <LoginButton>Login</LoginButton>
+                    <LoginButton clicked={registerSample}>Login</LoginButton>
                     <LoginButton clicked={clickedCancel}>Cancel</LoginButton>
                 </Row>
             </LoginContainer>
