@@ -12,10 +12,12 @@ export const Background = styled.div`
 
     &:hover {
         background-color: ${(props) => props.theme.primaryLight};
-        transform: translateY(-0.2rem);
+        transform: translateY(-0.3rem);
+        box-shadow: ${(props) => props.theme.boxLight};
     }
 
     &:active {
         background-color: ${(props) => props.theme.primaryLighter};
+        transform: translateY(-0.1rem);
     }
 `;
