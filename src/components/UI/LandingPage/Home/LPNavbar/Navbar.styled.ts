@@ -4,7 +4,7 @@ import { Container } from '../../../../../containers/Navbar/NavbarContainer.styl
 
 export const Nav = styled.nav`
     background-color: ${(props) => props.theme.primaryDark};
-    height: 4em;
+    height: 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,15 +26,15 @@ export const NavLogo = styled(Link)`
     color: ${(props) => props.theme.primaryLightest};
     justify-self: flex-start;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 3.5rem;
     display: flex;
     align-items: center;
 `;
 
 export const NavIcon = styled.div`
-    margin-right: 0.5em;
-    width: 1.8em;
-    height: 1.8em;
+    margin-right: 0.5rem;
+    width: 6.5rem;
+    height: 6.5rem;
     background-color: white;
     color: #000;
     align-items: center;
@@ -67,9 +67,9 @@ export const MenuPlaceholder = styled.ul<MenuProps>`
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 85vh;
+        height: 100vh;
         position: absolute;
-        top: 4em;
+        top: rem;
         left: ${(props) => (props.open ? 0 : '-100%')};
         border-top: 1px solid ${(props) => props.theme.primaryLight};
         background-image: linear-gradient(
@@ -84,11 +84,12 @@ export const MenuPlaceholder = styled.ul<MenuProps>`
 `;
 
 export const NavItem = styled.li`
-    height: 2em;
+    height: 3rem;
     border: none;
     border-bottom: 2px solid transparent;
     text-decoration: none;
     background-color: transparent;
+    margin-right: 1rem;
 
     &:hover {
         border-bottom: 2px solid ${(props) => props.theme.secondaryDark};
@@ -106,7 +107,8 @@ export const NavItem = styled.li`
 `;
 
 export const NavItemLogin = styled.li`
-    height: 2em;
+    height: 2rem;
+    padding: 2rem 0.5rem;
     border: 1px solid ${(props) => props.theme.secondaryDark};
     text-decoration: none;
     background-color: transparent;
