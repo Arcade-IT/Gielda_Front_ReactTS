@@ -12,9 +12,10 @@ export const View = styled.div`
         grid-template-columns: repeat(1, 1fr);
         margin: 2em 2em;
         @media screen and (min-width: 600px) {
-            grid-template-columns: repeat(1, 1fr);
+            padding: 1em;
+            grid-template-columns: repeat(2, 1fr);
             @media screen and (min-width: 900px) {
-                margin: 2em 5em;
+                padding: 1em;
                 grid-template-columns: repeat(3, 1fr);
             }
         }
@@ -82,6 +83,7 @@ export const ButtonContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1em;
 `;
 
 export const ButtonLink = styled(Link)`
