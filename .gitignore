@@ -12,6 +12,7 @@
 /build
 
 # misc
+/.cert
 /.idea
 .DS_Store
 .env.local

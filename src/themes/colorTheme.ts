@@ -7,4 +7,6 @@ export const colorTheme = {
     secondaryDark: '#cf7500',
     secondaryMedium: '#ff9103',
     secondaryLight: '#ffaf47',
+    warningLight: '#ff6969',
+    warningMedium: '#ff4747',
 };

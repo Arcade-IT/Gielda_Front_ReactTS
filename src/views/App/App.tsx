@@ -41,6 +41,7 @@ const App: React.FC = () => {
             </Switch>
         </Router>
     );
+    return <MainLayout></MainLayout>;
 };
 
 export default App;
