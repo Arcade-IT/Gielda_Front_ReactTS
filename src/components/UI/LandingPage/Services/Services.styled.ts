@@ -12,8 +12,7 @@ export const View = styled.div`
         grid-template-columns: repeat(1, 1fr);
         margin: 2em 2em;
         @media screen and (min-width: 600px) {
-            grid-template-columns: repeat(2, 1fr);
-
+            grid-template-columns: repeat(1, 1fr);
             @media screen and (min-width: 900px) {
                 grid-template-columns: repeat(3, 1fr);
             }

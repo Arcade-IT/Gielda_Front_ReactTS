@@ -104,6 +104,28 @@ export const NavItem = styled.li`
         }
     }
 `;
+
+export const NavItemLogin = styled.li`
+    height: 2em;
+    border: 1px solid ${(props) => props.theme.secondaryDark};
+    text-decoration: none;
+    background-color: transparent;
+
+    &:hover {
+        border-bottom: 2px solid ${(props) => props.theme.secondaryDark};
+        transform: scale(1.1);
+    }
+
+    @media screen and (max-width: 900px) {
+        width: 100%;
+
+        &:hover {
+            border: none;
+            color: ${(props) => props.theme.secondaryDark};
+        }
+    }
+`;
+
 export const NavLink = styled(Link)`
     height: 110%;
     color: ${(props) => props.theme.primaryLightest};

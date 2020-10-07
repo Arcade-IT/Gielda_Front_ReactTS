@@ -8,6 +8,7 @@ import {
     MenuPlaceholder,
     NavItem,
     NavLink,
+    NavItemLogin,
 } from './Navbar.styled';
 
 import Burger from '../../../../../icons/Hamburger/Hamburger';
@@ -46,9 +47,9 @@ const Navbar: React.FC = (props) => {
                     <NavItem>
                         <NavLink to="/landingPage/contact">Contact</NavLink>
                     </NavItem>
-                    <NavItem>
-                        <NavLink to="/landingPage/info">More Info</NavLink>
-                    </NavItem>
+                    <NavItemLogin>
+                        <NavLink to="/landingPage/Login">Login/SignUp</NavLink>
+                    </NavItemLogin>
                 </MenuPlaceholder>
             </NavbarContainer>
         </Nav>

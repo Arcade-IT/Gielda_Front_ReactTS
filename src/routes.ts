@@ -6,5 +6,5 @@ export const routes = {
     LPcontact: '/landingPage/contact',
     LPservices: '/landingPage/services',
     LPapp: '/landingPage/app',
-    LPinfo: '/landingPage/info',
+    LPlogin: '/landingPage/Login',
 };

@@ -13,7 +13,7 @@ const App: React.FC = () => {
         LPabout,
         LPapp,
         LPcontact,
-        LPinfo,
+        LPlogin,
         LPservices,
     } = routes;
     return (
@@ -25,7 +25,7 @@ const App: React.FC = () => {
                 <Route exact path={LPabout} component={LandingPage} />
                 <Route exact path={LPapp} component={LandingPage} />
                 <Route exact path={LPcontact} component={LandingPage} />
-                <Route exact path={LPinfo} component={LandingPage} />
+                <Route exact path={LPlogin} component={LandingPage} />
                 <Route exact path={LPservices} component={LandingPage} />
             </Switch>
         </Router>
