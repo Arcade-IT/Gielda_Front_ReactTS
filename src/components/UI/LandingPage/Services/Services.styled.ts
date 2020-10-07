@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 export const View = styled.div`
     display: grid;
     grid-gap: 2em;
-    grid-auto-rows: minmax(40em, auto);
-    margin: 2em 10em;
+    grid-auto-rows: minmax(30em, auto);
+    margin: 10em;
     color: ${(props) => props.theme.primaryLightest};
 
     @media screen and (min-width: 400px) {
@@ -14,6 +14,7 @@ export const View = styled.div`
         @media screen and (min-width: 600px) {
             grid-template-columns: repeat(1, 1fr);
             @media screen and (min-width: 900px) {
+                margin: 2em 5em;
                 grid-template-columns: repeat(3, 1fr);
             }
         }
