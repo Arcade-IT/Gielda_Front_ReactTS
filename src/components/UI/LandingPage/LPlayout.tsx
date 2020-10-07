@@ -1,20 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import LandingPage from '../../../Navigation/Pages/LandingPage/Navigation/LandingPage';
 
 import NBview from '../LandingPage/Home/LPview/NBview';
 import About from './About/About';
+import Services from './Services/Services';
 
 interface PropsI {
     location: { pathname: string };
     pathname: string;
 }
 const GetPages = (props: PropsI) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [props.location.pathname]);
+
     switch (props.location.pathname) {
         case '/':
             return <NBview />;
         case '/landingPage/about':
             return <About />;
+        case '/landingPage/services':
+            return <Services />;
 
         default:
             break;

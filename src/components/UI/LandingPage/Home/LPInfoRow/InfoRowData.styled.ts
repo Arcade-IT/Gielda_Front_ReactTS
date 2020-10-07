@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 interface InfoInterface {
     readonly lightView: boolean;
@@ -50,7 +51,14 @@ export const InfoColumnImage = styled.div`
         max-width: 100%;
         flex-basis: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+    }
+    @media screen and (min-width: 900px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-direction: row;
     }
 `;
 
@@ -63,6 +71,7 @@ export const TextWrapper = styled.div`
         padding-bottom: 4em;
         padding-top: 4em;
         padding-left: 4em;
+        padding-right: 4em;
     }
 `;
 
@@ -121,4 +130,39 @@ export const Text = styled.p`
     font-size: 1em;
     font-weight: 100;
     text-transform: capitalize;
+`;
+
+export const BouttonContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const ButtonLink = styled(Link)`
+    background-color: ${(props) => props.theme.secondaryDark};
+    width: 10em;
+    color: ${(props) => props.theme.primaryLightest};
+    font-size: 1.6em;
+    text-decoration: none;
+    border: none;
+    padding: 1em 1.1em;
+    max-height: 3em;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: 900px) {
+        width: 50%;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+    &:active {
+        position: relative;
+        opacity: 1;
+        top: -0.1em;
+    }
 `;

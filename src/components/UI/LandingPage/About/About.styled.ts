@@ -35,7 +35,6 @@ export const ImageContainer = styled.div`
 
     @media screen and (max-width: 900px) {
         padding: 1em;
-        background-color: red;
     }
 `;
 

@@ -11,6 +11,8 @@ import {
     Heading,
     Subtitle,
     Text,
+    ButtonLink,
+    BouttonContainer,
 } from './InfoRowData.styled';
 
 interface dataInterface {
@@ -18,6 +20,8 @@ interface dataInterface {
     subtitle: string;
     description: string;
     id: number;
+    link: string;
+    buttonTitle: string;
 }
 
 export const InfoRowData: React.FC<{ data: dataInterface[] }> = (props) => {
@@ -39,6 +43,11 @@ export const InfoRowData: React.FC<{ data: dataInterface[] }> = (props) => {
                                     <Subtitle>{info.subtitle}</Subtitle>
                                     <Text>{info.description}</Text>
                                 </TopLine>
+                                <BouttonContainer>
+                                    <ButtonLink to={info.link}>
+                                        {info.buttonTitle}
+                                    </ButtonLink>
+                                </BouttonContainer>
                             </TextWrapper>
                         </InfoColumn>
                         <InfoColumnImage>
