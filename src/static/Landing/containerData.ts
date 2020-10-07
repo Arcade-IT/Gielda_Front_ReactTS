@@ -15,7 +15,7 @@ export const containerData: DataTypes[] = [
         description:
             'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         link: '/',
-        buttonTitle: 'Log in or Sign up',
+        buttonTitle: 'Log in or Sign up'
     },
     {
         id: 1,
@@ -24,7 +24,7 @@ export const containerData: DataTypes[] = [
         description:
             'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
         link: '/landingPage/about',
-        buttonTitle: 'Read about us',
+        buttonTitle: 'Read about us'
     },
     {
         id: 2,
@@ -33,7 +33,7 @@ export const containerData: DataTypes[] = [
         description:
             'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
         link: '/landingPage/services',
-        buttonTitle: 'lern about our services',
+        buttonTitle: 'lern about our services'
     },
     {
         id: 3,
@@ -42,7 +42,7 @@ export const containerData: DataTypes[] = [
         description:
             'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
         link: '/landingPage/app',
-        buttonTitle: 'Our Apps',
+        buttonTitle: 'Our Apps'
     },
     {
         id: 4,
@@ -51,7 +51,7 @@ export const containerData: DataTypes[] = [
         description:
             'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
         link: '/landingPage/contact',
-        buttonTitle: 'Contact us',
+        buttonTitle: 'Contact us'
     },
     {
         id: 5,
@@ -60,6 +60,6 @@ export const containerData: DataTypes[] = [
         description:
             'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
         link: '/landingPage/info',
-        buttonTitle: 'Read more info',
-    },
+        buttonTitle: 'Read more info'
+    }
 ];

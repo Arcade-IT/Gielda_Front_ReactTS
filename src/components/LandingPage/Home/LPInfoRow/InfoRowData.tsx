@@ -12,8 +12,9 @@ import {
     Subtitle,
     Text,
     ButtonLink,
-    BouttonContainer,
+    BouttonContainer
 } from './InfoRowData.styled';
+import logo from '../../../../../assets/logo192.png';
 
 interface dataInterface {
     title: string;
@@ -52,9 +53,7 @@ export const InfoRowData: React.FC<{ data: dataInterface[] }> = (props) => {
                         </InfoColumn>
                         <InfoColumnImage>
                             <ImgWrapper>
-                                <Img
-                                    src={require('../../../../../Navigation/Pages/LandingPage/staticData/images/logo192.png')}
-                                />
+                                <Img src={logo} />
                             </ImgWrapper>
                         </InfoColumnImage>
                     </InfoRow>

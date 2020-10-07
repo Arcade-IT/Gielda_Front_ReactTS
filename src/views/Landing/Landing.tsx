@@ -1,11 +1,11 @@
 import React from 'react';
-import { Wrapper } from './Landingpage.styled';
+import { Wrapper } from './Landing.styled';
 import { ThemeProvider } from 'styled-components';
-import { colorTheme, shadowTheme, fontTheme } from '../../../../themes';
+import { colorTheme, shadowTheme, fontTheme } from '../../themes';
 
-import Navbar from '../../../../components/UI/LandingPage/Home//LPNavbar/Navbar';
+import Navbar from '../../components/LandingPage/Home/LPNavbar/Navbar';
 
-const Landingpage: React.FC = (props) => {
+const Landing: React.FC = (props) => {
     return (
         <ThemeProvider theme={colorTheme}>
             <ThemeProvider theme={shadowTheme}>
@@ -20,4 +20,4 @@ const Landingpage: React.FC = (props) => {
     );
 };
 
-export default Landingpage;
+export default Landing;

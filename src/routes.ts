@@ -1,6 +1,5 @@
 export const routes = {
     landingpage: '/',
-    homepage: '/home',
     mainlayout: '/mainlayout',
     LPabout: '/landingPage/about',
     LPcontact: '/landingPage/contact',

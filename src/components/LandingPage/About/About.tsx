@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { colorTheme, fontTheme, shadowTheme } from '../../../../themes';
+import { colorTheme, fontTheme, shadowTheme } from '../../../themes';
 import {
     MainContainer,
     BoxContainer,
@@ -10,8 +10,9 @@ import {
     Img,
     Heading,
     Subtitle,
-    ButtonJoin,
+    ButtonJoin
 } from './About.styled';
+import logo from '../../../../assets/logo192.png';
 
 export interface AboutProps {}
 
@@ -23,7 +24,7 @@ const About: React.FC<AboutProps> = (props) => {
                     <MainContainer>
                         <BoxContainer>
                             <ImageContainer>
-                                <Img src={require('./images/logo192.png')} />
+                                <Img src={logo} />
                             </ImageContainer>
                             <TextWrapper>
                                 <Heading>About us! </Heading>

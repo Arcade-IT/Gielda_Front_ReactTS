@@ -1,3 +1,3 @@
 export const fontTheme = {
-    family: 'Lato, sans-serif',
+    family: 'Oswald, sans-serif'
 };

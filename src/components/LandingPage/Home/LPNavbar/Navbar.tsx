@@ -8,10 +8,10 @@ import {
     MenuPlaceholder,
     NavItem,
     NavLink,
-    NavItemLogin,
+    NavItemLogin
 } from './Navbar.styled';
 
-import Burger from '../../../../../icons/Hamburger/Hamburger';
+import Burger from '../../../../icons/Hamburger/Hamburger';
 
 const Navbar: React.FC = (props) => {
     const [open, setOpen] = useState(false);

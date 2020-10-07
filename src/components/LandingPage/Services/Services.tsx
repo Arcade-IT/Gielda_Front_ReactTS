@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { colorTheme, fontTheme, shadowTheme } from '../../../../themes';
+import { colorTheme, fontTheme, shadowTheme } from '../../../themes';
 import {
     Container,
     Heading,
@@ -11,9 +11,10 @@ import {
     ButtonContainer,
     ButtonLink,
     Image,
-    ImageContainer,
+    ImageContainer
 } from './Services.styled';
-import { containerData } from '../../../../Navigation/Pages/LandingPage/staticData/data/servicesData';
+import { containerData } from '../../../static/Landing/servicesData';
+import logo from '../../../../assets/logo192.png';
 
 interface dataInterface {
     title: string;
@@ -36,9 +37,7 @@ const Services: React.FC = () => {
                                     <Subtitle>{info.subtitle}</Subtitle>
                                     <Text>{info.shortDescription}</Text>
                                     <ImageContainer>
-                                        <Image
-                                            src={require('./images/logo192.png')}
-                                        />
+                                        <Image src={logo} />
                                     </ImageContainer>
                                 </InfoContainer>
                                 <ButtonContainer>

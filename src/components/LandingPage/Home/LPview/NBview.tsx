@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from './NBview.styled';
 
-import { containerData } from '../../../../../Navigation/Pages/LandingPage/staticData/data/containerdata';
+import { containerData } from '../../../../static/Landing/containerData';
 
 import { InfoRowData } from '../LPInfoRow/InfoRowData';
 
