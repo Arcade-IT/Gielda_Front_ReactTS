@@ -10,9 +10,9 @@ import {
     NavLink,
     NavItemLogin
 } from './Navbar.styled';
-import { LogoHeader } from "../../../../../assets"
+import { LogoHeader } from "../../../assets"
 
-import {Burger} from '../../../../../icons'
+import {Burger} from '../../../icons'
 
 const Navbar: React.FC = (props) => {
     const [open, setOpen] = useState(false);

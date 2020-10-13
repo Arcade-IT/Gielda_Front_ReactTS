@@ -105,12 +105,14 @@ export const ButtonLink = styled(Link)`
         width: 50%;
     }
 
+    
     &:hover {
-        opacity: 0.8;
+        background-color: ${(props) => props.theme.secondaryDark};
+        transform: translateY(-0.2rem);
     }
     &:active {
         position: relative;
         opacity: 1;
-        top: -0.1rem;
+        transform: scale(1.02)
     }
 `;

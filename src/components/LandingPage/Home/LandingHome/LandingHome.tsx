@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from './NavbarView.styled';
+import { View } from './LandingHome.styled';
 
 import { containerData } from '../../../../static/Landing/containerData';
 

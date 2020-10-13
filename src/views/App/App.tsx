@@ -1,8 +1,9 @@
 import React from 'react';
 import MainLayout from '../../templates/MainLayout/MainLayout';
-import LandingPage from '../../components/LandingPage/LandingpageLayout';
+import LandingPage from '../../views/Landing/Landing';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { routes } from '../../routes';
+import {About, Services, Home} from '../../components/LandingPage'
 
 const App: React.FC = () => {
     /* Changes/PR:
@@ -13,10 +14,10 @@ const App: React.FC = () => {
 5) rearranged folders, deleted unnecessary files, corrected imports
 
 
-!!! TODO -  1) extract Home, About, Services as containers. Child elements as components.
-            2) Implement LPlayout.tsx functionality into LandingPage (now in views folder) and delete LPlayout.tsx
+!!! TODO -  1) extract Home, About, Services as containers. Child elements as components. DONE!!!!!
+            2) Implement LPlayout.tsx functionality into LandingPage (now in views folder) and delete LPlayout.tsx DONE!!!!!
             3) Full component names - it can be long, but understandable. Same for routes below. DONE!!!!!
-            4) Implement animations on buttons similar to those on MainLayout - without enlarging fonts
+            4) Implement animations on buttons similar to those on MainLayout - without enlarging fonts. Done!!!!
 */
 
     const {
@@ -32,16 +33,18 @@ const App: React.FC = () => {
         <Router>
             <Switch>
                 <Route exact path={mainlayout} component={MainLayout} />
-                <Route exact path={landingpage} component={LandingPage} />
-                <Route exact path={LPabout} component={LandingPage} />
-                <Route exact path={LPapp} component={LandingPage} />
-                <Route exact path={LPcontact} component={LandingPage} />
-                <Route exact path={LPlogin} component={LandingPage} />
-                <Route exact path={LPservices} component={LandingPage} />
+                <LandingPage>
+
+                <Route exact path={landingpage} component={Home} />
+                <Route exact path={LPabout} component={About} />
+                <Route exact path={LPservices} component={Services} />
+                <Route exact path={LPcontact} component={Home} />
+                <Route exact path={LPapp} component={Home} />
+                <Route exact path={LPlogin} component={Home} />
+                </LandingPage>
             </Switch>
         </Router>
     );
-    // return <MainLayout></MainLayout>;
 };
 
 export default App;
