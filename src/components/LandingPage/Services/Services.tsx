@@ -13,8 +13,8 @@ import {
     Image,
     ImageContainer
 } from './Services.styled';
+import {IconLight} from '../../../assets';
 import { containerData } from '../../../static/Landing/servicesData';
-import logo from '../../../../assets/logo192.png';
 
 interface dataInterface {
     title: string;
@@ -37,7 +37,7 @@ const Services: React.FC = () => {
                                     <Subtitle>{info.subtitle}</Subtitle>
                                     <Text>{info.shortDescription}</Text>
                                     <ImageContainer>
-                                        <Image src={logo} />
+                                        <Image src={IconLight} />
                                     </ImageContainer>
                                 </InfoContainer>
                                 <ButtonContainer>

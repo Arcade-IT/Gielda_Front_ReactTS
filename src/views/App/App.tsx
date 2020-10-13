@@ -1,6 +1,6 @@
 import React from 'react';
 import MainLayout from '../../templates/MainLayout/MainLayout';
-import LandingPage from '../../components/LandingPage/LPlayout';
+import LandingPage from '../../components/LandingPage/LandingpageLayout';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { routes } from '../../routes';
 
@@ -15,7 +15,7 @@ const App: React.FC = () => {
 
 !!! TODO -  1) extract Home, About, Services as containers. Child elements as components.
             2) Implement LPlayout.tsx functionality into LandingPage (now in views folder) and delete LPlayout.tsx
-            3) Full component names - it can be long, but understandable. Same for routes below.
+            3) Full component names - it can be long, but understandable. Same for routes below. DONE!!!!!
             4) Implement animations on buttons similar to those on MainLayout - without enlarging fonts
 */
 
@@ -41,7 +41,7 @@ const App: React.FC = () => {
             </Switch>
         </Router>
     );
-    return <MainLayout></MainLayout>;
+    // return <MainLayout></MainLayout>;
 };
 
 export default App;

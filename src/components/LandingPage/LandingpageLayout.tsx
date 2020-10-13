@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import LandingPage from '../../views/Landing/Landing';
 
-import NBview from './Home/LPview/NBview';
+import NBview from './Home/NavbarView/NavbarViewiew';
 import About from './About/About';
 import Services from './Services/Services';
 

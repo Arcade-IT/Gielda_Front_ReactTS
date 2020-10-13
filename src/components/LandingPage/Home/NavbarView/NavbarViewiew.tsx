@@ -1,9 +1,9 @@
 import React from 'react';
-import { View } from './NBview.styled';
+import { View } from './NavbarView.styled';
 
 import { containerData } from '../../../../static/Landing/containerData';
 
-import { InfoRowData } from '../LPInfoRow/InfoRowData';
+import { InfoRowData } from '../InfoRow/InfoRowData';
 
 const NBview: React.FC = (props) => {
     return (

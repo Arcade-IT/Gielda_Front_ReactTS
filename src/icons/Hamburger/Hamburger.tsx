@@ -8,7 +8,7 @@ type BurgerProps = {
     size: number;
 };
 
-const Burger: React.FC<BurgerProps> = (props) => {
+export const Burger: React.FC<BurgerProps> = (props) => {
     const { setOpen, open, size } = props;
     console.log(size);
 
@@ -21,4 +21,3 @@ const Burger: React.FC<BurgerProps> = (props) => {
     );
 };
 
-export default Burger;

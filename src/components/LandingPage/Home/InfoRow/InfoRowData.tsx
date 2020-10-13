@@ -14,7 +14,7 @@ import {
     ButtonLink,
     BouttonContainer
 } from './InfoRowData.styled';
-import logo from '../../../../../assets/logo192.png';
+import { IconDark } from '../../../../assets';
 
 interface dataInterface {
     title: string;
@@ -52,8 +52,8 @@ export const InfoRowData: React.FC<{ data: dataInterface[] }> = (props) => {
                             </TextWrapper>
                         </InfoColumn>
                         <InfoColumnImage>
-                            <ImgWrapper>
-                                <Img src={logo} />
+                            <ImgWrapper >
+                                <Img src={IconDark} />
                             </ImgWrapper>
                         </InfoColumnImage>
                     </InfoRow>

@@ -3,7 +3,7 @@ import { Wrapper } from './Landing.styled';
 import { ThemeProvider } from 'styled-components';
 import { colorTheme, shadowTheme, fontTheme } from '../../themes';
 
-import Navbar from '../../components/LandingPage/Home/LPNavbar/Navbar';
+import Navbar from '../../components/LandingPage/Home/NavbarView/Navbar/Navbar';
 
 const Landing: React.FC = (props) => {
     return (

@@ -3,15 +3,16 @@ import {
     Nav,
     NavbarContainer,
     NavLogo,
-    NavIcon,
+    NavLogoImage,
     MenuIconPlaceholder,
     MenuPlaceholder,
     NavItem,
     NavLink,
     NavItemLogin
 } from './Navbar.styled';
+import { LogoHeader } from "../../../../../assets"
 
-import Burger from '../../../../icons/Hamburger/Hamburger';
+import {Burger} from '../../../../../icons'
 
 const Navbar: React.FC = (props) => {
     const [open, setOpen] = useState(false);
@@ -20,8 +21,7 @@ const Navbar: React.FC = (props) => {
         <Nav>
             <NavbarContainer>
                 <NavLogo to="/">
-                    <NavIcon>icon</NavIcon>
-                    LOGO
+                    <NavLogoImage src={LogoHeader}/>
                 </NavLogo>
 
                 <MenuIconPlaceholder>
