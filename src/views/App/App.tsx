@@ -23,11 +23,11 @@ const App: React.FC = () => {
     const {
         landingpage,
         mainlayout,
-        LPabout,
-        LPapp,
-        LPcontact,
-        LPlogin,
-        LPservices
+        LandingpageAbout,
+        LandingpageApp,
+        LandingpageContact,
+        LandingpageServices,
+        LandingpageLogin
     } = routes;
     return (
         <Router>
@@ -36,11 +36,11 @@ const App: React.FC = () => {
                 <LandingPage>
 
                 <Route exact path={landingpage} component={Home} />
-                <Route exact path={LPabout} component={About} />
-                <Route exact path={LPservices} component={Services} />
-                <Route exact path={LPcontact} component={Home} />
-                <Route exact path={LPapp} component={Home} />
-                <Route exact path={LPlogin} component={Home} />
+                <Route exact path={LandingpageAbout} component={About} />
+                <Route exact path={LandingpageServices} component={Services} />
+                <Route exact path={LandingpageContact} component={Home} />
+                <Route exact path={LandingpageApp} component={Home} />
+                <Route exact path={LandingpageLogin} component={Home} />
                 </LandingPage>
             </Switch>
         </Router>
