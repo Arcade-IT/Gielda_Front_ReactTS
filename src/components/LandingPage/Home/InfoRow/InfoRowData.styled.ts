@@ -7,12 +7,13 @@ interface InfoInterface {
 }
 
 export const InfoRow = styled.div<InfoInterface>`
-    box-shadow: ${(props) => props.theme.boxDark};
+    box-shadow: ${(props) => props.theme.boxLight};
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     flex-direction: ${(props) => (props.reverse ? 'row-reverse' : 'row')};
-    margin: 0rem 0rem;
+    margin: 0;
+    border-radius: 0.3rem;
 
     background: ${(props) =>
         props.lightView ? props.theme.primaryDark : props.theme.primaryLighter};
@@ -83,8 +84,8 @@ export const ImgWrapper = styled.div`
     display: flex;
     margin: 1rem 0;
     justify-content: center;
-    width:100%;
-    padding:10rem;
+    width: 100%;
+    padding: 10rem;
 
     @media screen and (max-width: 900px) {
         margin: 2rem 0;
@@ -108,7 +109,7 @@ export const Img = styled.img`
     vertical-align: middle;
     display: inline-block;
     max-height: 90rem;
-    min-width:40% ;
+    min-width: 40%;
     width: 100%;
     height: auto;
 `;
@@ -141,39 +142,37 @@ export const Text = styled.p`
 
 export const BouttonContainer = styled.div`
     display: flex;
+    width: 25rem;
     justify-content: center;
     align-items: center;
     padding: 0 2rem;
 `;
 
 export const ButtonLink = styled(Link)`
-    background-color: ${(props) => props.theme.secondaryDark};
-    width: 10rem;
-    color: ${(props) => props.theme.primaryLightest};
-    font-size: 2rem;
+    background-color: ${(props) => props.theme.secondaryMedium};
+    width: 100%;
+    color: ${(props) => props.theme.primaryMedium};
+    font-size: 1.6rem;
     text-decoration: none;
     border: none;
     padding: 2rem 2rem;
     max-height: 3rem;
     display: flex;
-    width: 100%;
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-weight: 900;
+    font-weight: 700;
+    box-shadow: ${(props) => props.theme.boxLight};
+    transition: ${(props) => props.theme.mediumSpeed};
+    border-radius: 0.3rem;
 
-    @media screen and (min-width: 900px) {
-        width: 50%;
-    }
-
-    
     &:hover {
-        background-color: ${(props) => props.theme.secondaryDark};
+        background-color: ${(props) => props.theme.secondaryLight};
         transform: translateY(-0.2rem);
+        box-shadow: ${(props) => props.theme.boxMedium};
     }
+
     &:active {
-        position: relative;
-        opacity: 1;
-        transform: scale(1.02)
+        transform: translateY(0.1rem);
     }
 `;

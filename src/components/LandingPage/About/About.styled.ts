@@ -34,7 +34,7 @@ export const ImageContainer = styled.div`
     padding: 4rem;
 
     @media screen and (max-width: 900px) {
-min-width: 100%;
+        min-width: 100%;
         padding: 1rem;
     }
 `;
@@ -118,7 +118,6 @@ export const ButtonJoin = styled(Link)`
         width: 100%;
     }
 
-    
     &:hover {
         background-color: ${(props) => props.theme.secondaryDark};
         transform: translateY(-0.2rem);
@@ -126,6 +125,6 @@ export const ButtonJoin = styled(Link)`
     &:active {
         position: relative;
         opacity: 1;
-        transform: scale(1.02)
+        transform: scale(1.02);
     }
 `;

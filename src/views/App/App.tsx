@@ -3,7 +3,7 @@ import MainLayout from '../../templates/MainLayout/MainLayout';
 import LandingPage from '../../views/Landing/Landing';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { routes } from '../../routes';
-import {About, Services, Home} from '../../components/LandingPage'
+import { About, Services, Home } from '../../components/LandingPage';
 
 const App: React.FC = () => {
     /* Changes/PR:
@@ -34,13 +34,16 @@ const App: React.FC = () => {
             <Switch>
                 <Route exact path={mainlayout} component={MainLayout} />
                 <LandingPage>
-
-                <Route exact path={landingpage} component={Home} />
-                <Route exact path={LandingpageAbout} component={About} />
-                <Route exact path={LandingpageServices} component={Services} />
-                <Route exact path={LandingpageContact} component={Home} />
-                <Route exact path={LandingpageApp} component={Home} />
-                <Route exact path={LandingpageLogin} component={Home} />
+                    <Route exact path={landingpage} component={Home} />
+                    <Route exact path={LandingpageAbout} component={About} />
+                    <Route
+                        exact
+                        path={LandingpageServices}
+                        component={Services}
+                    />
+                    <Route exact path={LandingpageContact} component={Home} />
+                    <Route exact path={LandingpageApp} component={Home} />
+                    <Route exact path={LandingpageLogin} component={Home} />
                 </LandingPage>
             </Switch>
         </Router>

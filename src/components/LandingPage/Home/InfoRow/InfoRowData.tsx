@@ -30,7 +30,7 @@ export const InfoRowData: React.FC<{ data: dataInterface[] }> = (props) => {
     return (
         <div>
             {data.map((info: dataInterface) => {
-                let reverse = info.id % 2 ? true : false;
+                let reverse = !!(info.id % 2);
                 return (
                     <InfoRow
                         lightView={reverse}
@@ -52,7 +52,7 @@ export const InfoRowData: React.FC<{ data: dataInterface[] }> = (props) => {
                             </TextWrapper>
                         </InfoColumn>
                         <InfoColumnImage>
-                            <ImgWrapper >
+                            <ImgWrapper>
                                 <Img src={IconDark} />
                             </ImgWrapper>
                         </InfoColumnImage>

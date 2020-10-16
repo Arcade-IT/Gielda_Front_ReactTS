@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { connect, ConnectedProps } from 'react-redux';
 import {
     Nav,
     NavbarContainer,
@@ -10,18 +11,19 @@ import {
     NavLink,
     NavItemLogin
 } from './Navbar.styled';
-import { LogoHeader } from "../../../assets"
+import { LogoHeader } from '../../../assets';
 
-import {Burger} from '../../../icons'
+import { Burger } from '../../../icons';
 
-const Navbar: React.FC = (props) => {
+const Navbar: React.FC<PropsFromRedux> = (props) => {
     const [open, setOpen] = useState(false);
+    const { tempLogin } = props;
 
     return (
         <Nav>
             <NavbarContainer>
                 <NavLogo to="/">
-                    <NavLogoImage src={LogoHeader}/>
+                    <NavLogoImage src={LogoHeader} />
                 </NavLogo>
 
                 <MenuIconPlaceholder>
@@ -47,13 +49,19 @@ const Navbar: React.FC = (props) => {
                     <NavItem>
                         <NavLink to="/landingPage/contact">Contact</NavLink>
                     </NavItem>
-                    <NavItemLogin>
-                        <NavLink to="/landingPage/Login">Login/SignUp</NavLink>
-                    </NavItemLogin>
+                    <NavItemLogin>Login</NavItemLogin>
+                    <NavItemLogin>Signup</NavItemLogin>
                 </MenuPlaceholder>
             </NavbarContainer>
         </Nav>
     );
 };
 
-export default Navbar;
+const mapDispatchToProps = {
+    tempLogin: () => ({ type: 'TEMP_LOGIN' })
+};
+
+const connector = connect(null, mapDispatchToProps);
+type PropsFromRedux = ConnectedProps<typeof connector>;
+
+export default connector(Navbar);

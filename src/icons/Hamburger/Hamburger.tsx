@@ -10,7 +10,6 @@ type BurgerProps = {
 
 export const Burger: React.FC<BurgerProps> = (props) => {
     const { setOpen, open, size } = props;
-    console.log(size);
 
     return (
         <StyledBurger onClick={setOpen} open={open} size={size}>
@@ -20,4 +19,3 @@ export const Burger: React.FC<BurgerProps> = (props) => {
         </StyledBurger>
     );
 };
-

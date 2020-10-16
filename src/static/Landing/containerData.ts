@@ -33,7 +33,7 @@ export const containerData: DataTypes[] = [
         description:
             'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
         link: '/landingPage/services',
-        buttonTitle: 'lern about our services'
+        buttonTitle: 'Learn about our services'
     },
     {
         id: 3,

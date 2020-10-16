@@ -105,7 +105,6 @@ export const ButtonLink = styled(Link)`
         width: 50%;
     }
 
-    
     &:hover {
         background-color: ${(props) => props.theme.secondaryDark};
         transform: translateY(-0.2rem);
@@ -113,6 +112,6 @@ export const ButtonLink = styled(Link)`
     &:active {
         position: relative;
         opacity: 1;
-        transform: scale(1.02)
+        transform: scale(1.02);
     }
 `;

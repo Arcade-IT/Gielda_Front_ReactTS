@@ -35,26 +35,21 @@ const MainLayout: React.FC = (props) => {
 
     return (
         <ThemeProvider theme={colorTheme}>
-            <ThemeProvider theme={transitionTheme}>
-                <Wrapper>
-                    <Modal open={openModal} ref={modalRef}>
-                        <Login
-                            clickedCancel={closeLogin}
-                            isLogin={isModalLogin}
-                        />
-                    </Modal>
-                    <ThemeProvider theme={shadowTheme}>
-                        <Header />
-                    </ThemeProvider>
-                    <Sidebar />
-                    <Main>
-                        <Dashboard
-                            toggleLogin={() => openLogin()}
-                            toggleSignup={() => openSignup()}
-                        />
-                    </Main>
-                </Wrapper>
-            </ThemeProvider>
+            <Wrapper>
+                <Modal open={openModal} ref={modalRef}>
+                    <Login clickedCancel={closeLogin} isLogin={isModalLogin} />
+                </Modal>
+                <ThemeProvider theme={shadowTheme}>
+                    <Header />
+                </ThemeProvider>
+                <Sidebar />
+                <Main>
+                    <Dashboard
+                        toggleLogin={() => openLogin()}
+                        toggleSignup={() => openSignup()}
+                    />
+                </Main>
+            </Wrapper>
         </ThemeProvider>
     );
 };

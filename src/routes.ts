@@ -5,5 +5,5 @@ export const routes = {
     LandingpageContact: '/landingPage/contact',
     LandingpageServices: '/landingPage/services',
     LandingpageApp: '/landingPage/app',
-    LandingpageLogin: '/landingPage/Login',
+    LandingpageLogin: '/landingPage/Login'
 };

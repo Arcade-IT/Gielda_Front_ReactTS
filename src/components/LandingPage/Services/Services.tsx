@@ -13,7 +13,7 @@ import {
     Image,
     ImageContainer
 } from './Services.styled';
-import {IconLight} from '../../../assets';
+import { IconLight } from '../../../assets';
 import { containerData } from '../../../static/Landing/servicesData';
 
 interface dataInterface {

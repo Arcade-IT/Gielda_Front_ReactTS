@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Container } from '../../../containers/Navbar/NavbarContainer.styled';
 
 export const Nav = styled.nav`
     background-color: ${(props) => props.theme.primaryDark};
@@ -8,19 +7,28 @@ export const Nav = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    
+    font-size: 1.6rem;
+
     position: sticky;
     top: 0;
     z-index: 999;
 `;
 
-export const NavbarContainer = styled(Container)`
+export const NavbarContainer = styled.div`
     display: flex;
     justify-content: space-between;
     height: 100%;
 
-    ${Container}
+    z-index: 1;
+    width: 100%;
+    max-width: 130em;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 4em;
+
+    @media screen and (max-width: 991px) {
+        padding: 0 2em;
+    }
 `;
 
 export const NavLogo = styled(Link)`
@@ -33,7 +41,7 @@ export const NavLogo = styled(Link)`
 `;
 
 export const NavLogoImage = styled.img`
-    margin:1rem;
+    margin: 1rem;
     width: auto;
     height: 5rem;
     align-items: center;
@@ -68,7 +76,7 @@ export const MenuPlaceholder = styled.ul<MenuProps>`
         width: 100%;
         height: 100vh;
         position: absolute;
-        top: rem;
+        top: 0;
         left: ${(props) => (props.open ? 0 : '-100%')};
         border-top: 1px solid ${(props) => props.theme.primaryLight};
         background-image: linear-gradient(
@@ -89,10 +97,11 @@ export const NavItem = styled.li`
     text-decoration: none;
     background-color: transparent;
     margin-right: 1rem;
+    transition: ${(props) => props.theme.mediumSpeed};
 
     &:hover {
         border-bottom: 2px solid ${(props) => props.theme.secondaryDark};
-        transform: scale(1.1);
+        transform: translateY(-0.3rem);
     }
 
     @media screen and (max-width: 900px) {
@@ -105,16 +114,28 @@ export const NavItem = styled.li`
     }
 `;
 
-export const NavItemLogin = styled.li`
+export const NavItemLogin = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
     height: 2rem;
-    padding: 2rem 0.5rem;
+    padding: 1.5rem 0.5rem;
     border: 1px solid ${(props) => props.theme.secondaryDark};
     text-decoration: none;
     background-color: transparent;
+    transition: ${(props) => props.theme.mediumSpeed};
+    border-radius: 0.3rem;
+    color: white;
+    cursor: pointer;
 
     &:hover {
-        border-bottom: 2px solid ${(props) => props.theme.secondaryDark};
-        transform: scale(1.1);
+        transform: translateY(-0.3rem);
+        color: ${(props) => props.theme.secondaryDark};
+    }
+
+    &:last-child {
+        margin-left: 2rem;
     }
 
     @media screen and (max-width: 900px) {
@@ -135,6 +156,7 @@ export const NavLink = styled(Link)`
     align-items: center;
     padding: 0 2rem;
     justify-content: center;
+    transition: ${(props) => props.theme.mediumSpeed};
 
     &:hover {
         border: none;
