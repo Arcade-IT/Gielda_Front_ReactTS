@@ -12,7 +12,7 @@ import {
     Subtitle,
     ButtonJoin
 } from './About.styled';
-import logo from '../../../../assets/logo192.png';
+import logo from '../../../assets/Logo/LogoArcade.svg';
 
 export interface AboutProps {}
 

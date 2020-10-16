@@ -83,6 +83,8 @@ export const ImgWrapper = styled.div`
     display: flex;
     margin: 1rem 0;
     justify-content: center;
+    width:100%;
+    padding:10rem;
 
     @media screen and (max-width: 900px) {
         margin: 2rem 0;
@@ -106,6 +108,7 @@ export const Img = styled.img`
     vertical-align: middle;
     display: inline-block;
     max-height: 90rem;
+    min-width:40% ;
     width: 100%;
     height: auto;
 `;
@@ -163,12 +166,14 @@ export const ButtonLink = styled(Link)`
         width: 50%;
     }
 
+    
     &:hover {
-        opacity: 0.8;
+        background-color: ${(props) => props.theme.secondaryDark};
+        transform: translateY(-0.2rem);
     }
     &:active {
         position: relative;
         opacity: 1;
-        top: -0.1rem;
+        transform: scale(1.02)
     }
 `;

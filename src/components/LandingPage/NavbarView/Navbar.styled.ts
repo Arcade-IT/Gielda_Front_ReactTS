@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Container } from '../../../../containers/Navbar/NavbarContainer.styled';
+import { Container } from '../../../containers/Navbar/NavbarContainer.styled';
 
 export const Nav = styled.nav`
     background-color: ${(props) => props.theme.primaryDark};
@@ -9,6 +9,7 @@ export const Nav = styled.nav`
     justify-content: center;
     align-items: center;
     font-size: 2rem;
+    
     position: sticky;
     top: 0;
     z-index: 999;
@@ -31,12 +32,10 @@ export const NavLogo = styled(Link)`
     align-items: center;
 `;
 
-export const NavIcon = styled.div`
-    margin-right: 0.5rem;
-    width: 6.5rem;
-    height: 6.5rem;
-    background-color: white;
-    color: #000;
+export const NavLogoImage = styled.img`
+    margin:1rem;
+    width: auto;
+    height: 5rem;
     align-items: center;
     justify-content: center;
 `;

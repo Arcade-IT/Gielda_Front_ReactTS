@@ -13,7 +13,7 @@ export const BoxContainer = styled.div`
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-itrems: center;
+    align-items: center;
     background-color: ${(props) => props.theme.primaryDark};
     @media screen and (min-width: 900px) {
         flex-direction: row;
@@ -29,11 +29,12 @@ export const ImageContainer = styled.div`
     display: flex;
     justify-content: center;
     flex: 3;
-    align-itrems: center;
+    align-items: center;
     justify-content: center;
     padding: 4rem;
 
     @media screen and (max-width: 900px) {
+min-width: 100%;
         padding: 1rem;
     }
 `;
@@ -87,7 +88,6 @@ export const Text = styled.p`
 
 export const Img = styled.img`
     border: 0;
-    max-width: 100%;
     vertical-align: middle;
     display: inline-block;
     width: 100%;
@@ -118,12 +118,14 @@ export const ButtonJoin = styled(Link)`
         width: 100%;
     }
 
+    
     &:hover {
-        opacity: 0.8;
+        background-color: ${(props) => props.theme.secondaryDark};
+        transform: translateY(-0.2rem);
     }
     &:active {
         position: relative;
         opacity: 1;
-        top: -0.1rem;
+        transform: scale(1.02)
     }
 `;
