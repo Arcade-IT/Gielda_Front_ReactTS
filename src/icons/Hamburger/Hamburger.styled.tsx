@@ -24,7 +24,7 @@ export const StyledBurger = styled.button<BurgerProps>`
     }
     div {
         width: 2.1rem;
-        height: 0.25rem;
+        height: 2px;
         background-color: ${(props) => props.theme.primaryLightest};
         border-radius: 10px;
         transition: all 0.3s linear;
