@@ -11,13 +11,14 @@ export const Button = styled.button`
     font-size: 1.6rem;
     text-transform: uppercase;
     background-color: ${(props) => props.theme.secondaryMedium};
-    color: #fff;
+    color: ${(props) => props.theme.primaryLight};
     transition: ${(props) => props.theme.mediumSpeed};
     cursor: pointer;
     outline: none;
 
     &:hover {
         background-color: ${(props) => props.theme.secondaryDark};
+        color: ${(props) => props.theme.primaryLightest};
         transform: translateY(-0.2rem);
     }
 `;

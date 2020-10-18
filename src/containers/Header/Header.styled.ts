@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.header`
     width: 100%;
-    height: 12vh;
+    height: 10vh;
     background-color: ${(props) => props.theme.primaryMedium};
     grid-row: 1 / 2;
     grid-column: 1 / 3;

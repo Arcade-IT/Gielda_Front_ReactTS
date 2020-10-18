@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import { connect, ConnectedProps } from 'react-redux';
 import { Wrapper, Row, Warning, LoginContainer, Text } from './Login.styled';
 import { CSSTransition } from 'react-transition-group';
 import LoginButton from '../../components/UI/Login/LoginButton/LoginButton';
