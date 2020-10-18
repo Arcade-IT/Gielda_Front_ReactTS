@@ -7,17 +7,25 @@ import {
     fontTheme,
     transitionTheme
 } from '../../themes';
+import Navbar from '../../containers/Navbar/Navbar';
 
-import Navbar from '../../components/LandingPage/NavbarView/Navbar';
+interface LandingProps {
+    toggleLogin: (isLogin: boolean) => void;
+}
 
-const Landing: React.FC = (props) => {
+const Landing: React.FC<LandingProps> = (props) => {
+    const { toggleLogin } = props;
     return (
         <ThemeProvider theme={colorTheme}>
             <ThemeProvider theme={shadowTheme}>
                 <ThemeProvider theme={fontTheme}>
                     <ThemeProvider theme={transitionTheme}>
                         <Wrapper>
-                            <Navbar />
+                            <Navbar
+                                toggleLogin={(isLogin: boolean) =>
+                                    toggleLogin(isLogin)
+                                }
+                            />
                             {props.children}
                         </Wrapper>
                     </ThemeProvider>

@@ -11,13 +11,18 @@ import {
     NavLink,
     NavItemLogin
 } from './Navbar.styled';
-import { LogoHeader } from '../../../assets';
+import { LogoHeader } from '../../assets';
+import { Burger } from '../../icons';
 
-import { Burger } from '../../../icons';
+interface NavbarProps {
+    toggleLogin: (isLogin: boolean) => void;
+}
 
-const Navbar: React.FC<PropsFromRedux> = (props) => {
+type Props = NavbarProps & PropsFromRedux;
+
+const Navbar: React.FC<Props> = (props) => {
     const [open, setOpen] = useState(false);
-    const { tempLogin } = props;
+    const { tempLogin, toggleLogin } = props;
 
     return (
         <Nav>
@@ -49,8 +54,12 @@ const Navbar: React.FC<PropsFromRedux> = (props) => {
                     <NavItem>
                         <NavLink to="/landingPage/contact">Contact</NavLink>
                     </NavItem>
-                    <NavItemLogin>Login</NavItemLogin>
-                    <NavItemLogin>Signup</NavItemLogin>
+                    <NavItemLogin onClick={() => toggleLogin(true)}>
+                        Login
+                    </NavItemLogin>
+                    <NavItemLogin onClick={() => toggleLogin(false)}>
+                        Signup
+                    </NavItemLogin>
                 </MenuPlaceholder>
             </NavbarContainer>
         </Nav>
