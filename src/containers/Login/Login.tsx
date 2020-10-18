@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import { connect, ConnectedProps } from 'react-redux';
 import { Wrapper, Row, Warning, LoginContainer, Text } from './Login.styled';
 import { CSSTransition } from 'react-transition-group';
 import LoginButton from '../../components/UI/Login/LoginButton/LoginButton';
@@ -8,14 +7,17 @@ import { updateObject } from '../../shared/utility';
 import '../../transitions/transitions.css';
 import LoginImage from '../../components/UI/Login/LoginImage/LoginImage';
 import axios from 'axios';
+import { connect, ConnectedProps } from 'react-redux';
 
-type LoginProps = {
+interface LoginProps {
     clickedCancel(): void;
     isLogin?: boolean;
-};
+}
 
-const Login: React.FC<LoginProps> = (props) => {
-    const { clickedCancel, isLogin } = props;
+type Props = LoginProps & PropsFromRedux;
+
+const Login: React.FC<Props> = (props) => {
+    const { clickedCancel, isLogin, tempLogin } = props;
     const [loginData, setLoginData] = useState({
         email: '',
         password: ''
@@ -190,7 +192,7 @@ const Login: React.FC<LoginProps> = (props) => {
                 </CSSTransition>
                 {isLogin ? login : signup}
                 <Row>
-                    <LoginButton clicked={registerSample}>Login</LoginButton>
+                    <LoginButton clicked={tempLogin}>Login</LoginButton>
                     <LoginButton clicked={clickedCancel}>Cancel</LoginButton>
                 </Row>
             </LoginContainer>
@@ -198,4 +200,11 @@ const Login: React.FC<LoginProps> = (props) => {
     );
 };
 
-export default Login;
+const mapDispatchToProps = {
+    tempLogin: () => ({ type: 'TEMP_LOGIN' })
+};
+
+const connector = connect(null, mapDispatchToProps);
+type PropsFromRedux = ConnectedProps<typeof connector>;
+
+export default connector(Login);

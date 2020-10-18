@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+interface MenuProps {
+    readonly open: boolean;
+}
+
 export const Nav = styled.nav`
     background-color: ${(props) => props.theme.primaryDark};
     height: 7rem;
@@ -57,10 +61,6 @@ export const MenuIconPlaceholder = styled.div`
         display: flex;
     } ;
 `;
-
-interface MenuProps {
-    readonly open: boolean;
-}
 
 export const MenuPlaceholder = styled.ul<MenuProps>`
     background-color: ${(props) => props.theme.primaryDark};

@@ -1,9 +1,8 @@
 export const routes = {
-    landingpage: '/',
-    mainlayout: '/mainlayout',
-    LandingpageAbout: '/landingPage/about',
-    LandingpageContact: '/landingPage/contact',
-    LandingpageServices: '/landingPage/services',
-    LandingpageApp: '/landingPage/app',
-    LandingpageLogin: '/landingPage/Login'
+    landingPage: '/',
+    landingPageAbout: '/landingPage/about',
+    landingPageContact: '/landingPage/contact',
+    landingPageServices: '/landingPage/services',
+    landingPageApp: '/landingPage/app',
+    landingPageLogin: '/landingPage/Login'
 };

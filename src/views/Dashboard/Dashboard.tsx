@@ -1,20 +1,11 @@
 import React from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 
-type DashboardProps = {
-    toggleLogin: () => void;
-    toggleSignup: () => void;
-};
-
-type Props = DashboardProps & PropsFromRedux;
-
-const Dashboard: React.FC<Props> = (props) => {
-    const { toggleLogin, toggleSignup, tempLogin } = props;
+const Dashboard: React.FC<PropsFromRedux> = (props) => {
+    const { tempLogin } = props;
     return (
         <>
             Dashboard goes here.
-            <button onClick={toggleLogin}>Toggle login</button>
-            <button onClick={toggleSignup}>Toggle signup</button>
             <button onClick={tempLogin}>TEMP LOGIN</button>
         </>
     );
