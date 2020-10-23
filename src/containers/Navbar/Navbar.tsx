@@ -22,7 +22,8 @@ type Props = NavbarProps & PropsFromRedux;
 
 const Navbar: React.FC<Props> = (props) => {
     const [open, setOpen] = useState(false);
-    const { tempLogin, toggleLogin } = props;
+    const { toggleLogin } = props;
+    // const { tempLogin, toggleLogin } = props;
 
     return (
         <Nav>
