@@ -5,7 +5,7 @@ interface BackdropProps {
 }
 
 export const View = styled.div<BackdropProps>`
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: fixed;
     display: flex;

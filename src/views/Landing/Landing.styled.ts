@@ -6,4 +6,6 @@ export const Wrapper = styled.div`
     min-height: 100vh;
     background-color: ${(props) => props.theme.primaryLight};
     width: 100%;
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
 `;
