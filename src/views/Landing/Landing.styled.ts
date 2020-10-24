@@ -5,6 +5,5 @@ export const Wrapper = styled.div`
     flex-direction: column;
     min-height: 100vh;
     background-color: ${(props) => props.theme.primaryLight};
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
+    width: 100%;
 `;

@@ -6,7 +6,7 @@ import LoginInput from '../../components/UI/Login/LoginInput/LoginInput';
 import { updateObject } from '../../shared/utility';
 import '../../transitions/transitions.css';
 import LoginImage from '../../components/UI/Login/LoginImage/LoginImage';
-import axios from 'axios';
+// import axios from 'axios';
 import { connect, ConnectedProps } from 'react-redux';
 
 interface LoginProps {
@@ -80,17 +80,17 @@ const Login: React.FC<Props> = (props) => {
         login ? setLoginData(updatedData) : setSignupData(updatedData);
     };
 
-    const registerSample = () => {
-        axios
-            .post('https://localhost:443/api/user/register', {
-                email: 'przemowiec@test.com',
-                firstName: 'Przemo',
-                lastName: 'Reducha',
-                password: 'twojaStara'
-            })
-            .then((response) => console.log(response))
-            .catch((error) => console.log(error));
-    };
+    // const registerSample = () => {
+    //     axios
+    //         .post('https://localhost:443/api/user/register', {
+    //             email: 'przemowiec@test.com',
+    //             firstName: 'Przemo',
+    //             lastName: 'Reducha',
+    //             password: 'twojaStara'
+    //         })
+    //         .then((response) => console.log(response))
+    //         .catch((error) => console.log(error));
+    // };
 
     const login = (
         <>

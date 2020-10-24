@@ -10,27 +10,20 @@ export const InfoRow = styled.div<InfoInterface>`
     box-shadow: ${(props) => props.theme.boxLight};
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     flex-direction: ${(props) => (props.reverse ? 'row-reverse' : 'row')};
-    margin: 0;
     border-radius: 0.3rem;
+    margin: 2rem 10rem;
 
     background: ${(props) =>
         props.lightView ? props.theme.primaryDark : props.theme.primaryLighter};
-
-    @media screen and (min-width: 900px) {
-        margin: 2rem 10rem;
-    }
-
     @media screen and (max-width: 900px) {
-        margin: 2rem 1rem;
+        margin: 2rem 2rem;
         padding: 0;
     }
 `;
 
 export const InfoColumn = styled.div`
     flex: 3;
-    max-width: 100%;
     justify-content: center;
 
     @media screen and (max-width: 900px) {
@@ -42,17 +35,16 @@ export const InfoColumn = styled.div`
     @media screen and (min-width: 900px) {
         margin-bottom: 1rem;
         padding-left: 10rem;
-        padding-rught: 10rem;
+        padding-right: 10rem;
         padding-top: 5rem;
     }
 `;
 
 export const InfoColumnImage = styled.div`
     flex: 2;
-    max-width: 100%;
     justify-content: center;
     align-items: center;
-
+    width: 30vw;
     @media screen and (max-width: 900px) {
         max-width: 100%;
         flex-basis: 100%;
@@ -175,4 +167,12 @@ export const ButtonLink = styled(Link)`
     &:active {
         transform: translateY(0.1rem);
     }
+`;
+
+export const Container = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `;
