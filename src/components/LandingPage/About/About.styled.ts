@@ -30,7 +30,6 @@ export const ImageContainer = styled.div`
     justify-content: center;
     flex: 3;
     align-items: center;
-    justify-content: center;
     padding: 4rem;
 
     @media screen and (max-width: 900px) {
@@ -44,10 +43,7 @@ export const TextWrapper = styled.div`
     flex: 7;
     flex-direction: column;
     @media screen and (min-width: 900px) {
-        padding-bottom: 4rem;
-        padding-top: 4rem;
-        padding-left: 4rem;
-        padding-right: 4rem;
+        padding: 4rem;
     }
 
     @media screen and (max-width: 900px) {
@@ -94,10 +90,7 @@ export const Img = styled.img`
     height: auto;
 
     @media screen and (max-width: 900px) {
-        padding-bottom: 4rem;
-        padding-top: 4rem;
-        padding-right: 1rem;
-        padding-left: 1rem;
+        padding: 4rem 1rem;
     }
 `;
 

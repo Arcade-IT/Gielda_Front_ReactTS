@@ -12,7 +12,7 @@ import {
     Subtitle,
     Text,
     ButtonLink,
-    BouttonContainer,
+    ButtonContainer,
     Container
 } from './InfoRowData.styled';
 import { IconDark } from '../../../../assets';
@@ -45,11 +45,11 @@ export const InfoRowData: React.FC<{ data: dataInterface[] }> = (props) => {
                                     <Subtitle>{info.subtitle}</Subtitle>
                                     <Text>{info.description}</Text>
                                 </TopLine>
-                                <BouttonContainer>
+                                <ButtonContainer>
                                     <ButtonLink to={info.link}>
                                         {info.buttonTitle}
                                     </ButtonLink>
-                                </BouttonContainer>
+                                </ButtonContainer>
                             </TextWrapper>
                         </InfoColumn>
                         <InfoColumnImage>

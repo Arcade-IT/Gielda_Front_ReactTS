@@ -9,7 +9,7 @@ export const View = styled.div`
     color: ${(props) => props.theme.primaryLightest};
 
     @media screen and (min-width: 400px) {
-        grid-template-columns: 1, 1fr;
+        grid-template-columns: 1fr;
         margin: 2rem;
     }
     @media screen and (min-width: 600px) {
@@ -40,7 +40,6 @@ export const InfoContainer = styled.div`
 `;
 
 export const Heading = styled.h1`
-    max-width: 40rem;
     font-size: 2rem;
     line-height: 1.1;
     margin-bottom: 0.2rem;
@@ -50,7 +49,6 @@ export const Heading = styled.h1`
 `;
 
 export const Subtitle = styled.p`
-    max-width: 40rem;
     margin-bottom: 0.4rem;
     font-size: 1.5rem;
     font-weight: 500;
@@ -60,8 +58,7 @@ export const Subtitle = styled.p`
 `;
 
 export const Text = styled.p`
-    max-width: 40rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
     font-size: 1.5rem;
     font-weight: 200;
     text-transform: capitalize;
@@ -88,7 +85,6 @@ export const ButtonContainer = styled.div`
 
 export const ButtonLink = styled(Link)`
     background-color: ${(props) => props.theme.secondaryDark};
-    width: 10rem;
     color: ${(props) => props.theme.primaryLightest};
     font-size: 1.6rem;
     text-decoration: none;
@@ -101,6 +97,8 @@ export const ButtonLink = styled(Link)`
     align-items: center;
     justify-content: center;
     font-weight: 900;
+    transition: ${props => props.theme.mediumSpeed};
+    
     @media screen and (min-width: 900px) {
         width: 50%;
     }

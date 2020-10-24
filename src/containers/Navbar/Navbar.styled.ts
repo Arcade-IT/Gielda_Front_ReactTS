@@ -12,7 +12,6 @@ export const Nav = styled.nav`
     justify-content: center;
     align-items: center;
     font-size: 1.6rem;
-
     position: sticky;
     top: 0;
     z-index: 999;
@@ -22,12 +21,10 @@ export const NavbarContainer = styled.div`
     display: flex;
     justify-content: space-between;
     height: 100%;
-
     z-index: 1;
     width: 100%;
     max-width: 130em;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
     padding: 0 4em;
 
     @media screen and (max-width: 991px) {
@@ -48,8 +45,6 @@ export const NavLogoImage = styled.img`
     margin: 1rem;
     width: auto;
     height: 5rem;
-    align-items: center;
-    justify-content: center;
 `;
 
 export const MenuIconPlaceholder = styled.div`
@@ -64,7 +59,6 @@ export const MenuIconPlaceholder = styled.div`
 
 export const MenuPlaceholder = styled.ul<MenuProps>`
     background-color: ${(props) => props.theme.primaryDark};
-
     display: flex;
     align-items: center;
     list-style: none;

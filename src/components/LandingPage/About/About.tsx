@@ -16,7 +16,7 @@ import logo from '../../../assets/Logo/LogoArcade.svg';
 
 export interface AboutProps {}
 
-const About: React.FC<AboutProps> = (props) => {
+const About: React.FC<AboutProps> = () => {
     return (
         <ThemeProvider theme={colorTheme}>
             <ThemeProvider theme={shadowTheme}>

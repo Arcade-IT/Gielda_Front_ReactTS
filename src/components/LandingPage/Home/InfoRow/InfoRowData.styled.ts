@@ -131,7 +131,7 @@ export const Text = styled.p`
     text-transform: capitalize;
 `;
 
-export const BouttonContainer = styled.div`
+export const ButtonContainer = styled.div`
     display: flex;
     width: 25rem;
     justify-content: center;
