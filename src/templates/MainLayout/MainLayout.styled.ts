@@ -4,8 +4,6 @@ export const Wrapper = styled.div`
     width: 100%;
     height: max-content;
     display: grid;
-    grid-template-rows: repeat(max-content, 2);
-    grid-template-columns: 14vw 86vw;
 `;
 
 export const Main = styled.main`

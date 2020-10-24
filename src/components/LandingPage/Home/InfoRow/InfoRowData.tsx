@@ -12,7 +12,8 @@ import {
     Subtitle,
     Text,
     ButtonLink,
-    BouttonContainer
+    BouttonContainer,
+    Container
 } from './InfoRowData.styled';
 import { IconDark } from '../../../../assets';
 
@@ -28,7 +29,7 @@ interface dataInterface {
 export const InfoRowData: React.FC<{ data: dataInterface[] }> = (props) => {
     const { data } = props;
     return (
-        <div>
+        <Container>
             {data.map((info: dataInterface) => {
                 let reverse = !!(info.id % 2);
                 return (
@@ -59,6 +60,6 @@ export const InfoRowData: React.FC<{ data: dataInterface[] }> = (props) => {
                     </InfoRow>
                 );
             })}
-        </div>
+        </Container>
     );
 };

@@ -105,11 +105,14 @@ export const NavItem = styled.li`
     }
 
     @media screen and (max-width: 900px) {
-        width: 100%;
-
+        width: 30%;
+        border: 0;
+        border-radius: 0;
+        color: ${(props) => props.theme.secondaryDark};
         &:hover {
             border: none;
             color: ${(props) => props.theme.secondaryDark};
+            border-bottom: 1px solid ${(props) => props.theme.secondaryDark};
         }
     }
 `;
@@ -134,16 +137,20 @@ export const NavItemLogin = styled.div`
         color: ${(props) => props.theme.secondaryDark};
     }
 
-    &:last-child {
-        margin-left: 2rem;
-    }
-
     @media screen and (max-width: 900px) {
-        width: 100%;
+        width: 30%;
+        border: 0;
+        border-radius: 0;
+        color: ${(props) => props.theme.secondaryDark};
 
         &:hover {
-            border: none;
+            border-bottom: 1px solid ${(props) => props.theme.secondaryDark};
             color: ${(props) => props.theme.secondaryDark};
+        }
+    }
+    @media screen and (min-width: 900px) {
+        &:last-child {
+            margin-left: 2rem;
         }
     }
 `;
