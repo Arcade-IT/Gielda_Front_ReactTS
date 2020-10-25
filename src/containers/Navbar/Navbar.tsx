@@ -13,6 +13,7 @@ import {
 } from './Navbar.styled';
 import { LogoHeader } from '../../assets';
 import { Burger } from '../../icons';
+import { routes } from '../../routes';
 
 interface NavbarProps {
     toggleLogin: (isLogin: boolean) => void;
@@ -24,6 +25,14 @@ const Navbar: React.FC<Props> = (props) => {
     const [open, setOpen] = useState(false);
     const { toggleLogin } = props;
     // const { tempLogin, toggleLogin } = props;
+
+    const {
+        app,
+        landingPage,
+        landingPageAbout,
+        landingPageContact,
+        landingPageServices
+    } = routes;
 
     return (
         <Nav>
@@ -41,19 +50,21 @@ const Navbar: React.FC<Props> = (props) => {
                 </MenuIconPlaceholder>
                 <MenuPlaceholder onClick={() => setOpen(!open)} open={open}>
                     <NavItem>
-                        <NavLink to="/">Home</NavLink>
+                        <NavLink to={landingPage}>Home</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/about">About</NavLink>
+                        <NavLink to={landingPageAbout} replace>
+                            About
+                        </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/services">Services</NavLink>
+                        <NavLink to={landingPageServices}>Services</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/app">App</NavLink>
+                        <NavLink to={app}>App</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/contact">Contact</NavLink>
+                        <NavLink to={landingPageContact}>Contact</NavLink>
                     </NavItem>
                     <NavItemLogin onClick={() => toggleLogin(true)}>
                         Login

@@ -96,6 +96,39 @@ const MainLayout: React.FC<PropsFromRedux> = (props) => {
                                             <Redirect to={landingPage} />
                                         )}
                                     </Route>
+                                    <Route
+                                        exact
+                                        path={landingPageAbout}
+                                        component={About}
+                                    >
+                                        {loggedIn ? (
+                                            <Redirect to={app} />
+                                        ) : (
+                                            loggedOutView
+                                        )}
+                                    </Route>
+                                    <Route
+                                        exact
+                                        path={landingPageServices}
+                                        component={Services}
+                                    >
+                                        {loggedIn ? (
+                                            <Redirect to={app} />
+                                        ) : (
+                                            loggedOutView
+                                        )}
+                                    </Route>
+                                    <Route
+                                        exact
+                                        path={landingPageContact}
+                                        component={Home}
+                                    >
+                                        {loggedIn ? (
+                                            <Redirect to={app} />
+                                        ) : (
+                                            loggedOutView
+                                        )}
+                                    </Route>
                                 </Wrapper>
                             </Switch>
                         </Router>
