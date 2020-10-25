@@ -1,7 +1,7 @@
 import React from 'react';
 import { SVG } from '../../types/SVG';
 
-export const IconHome: React.FC<SVG> = (props) => {
+export const IconDollar: React.FC<SVG> = (props) => {
     const { size, title, color, style } = props;
     return (
         <svg
@@ -13,7 +13,7 @@ export const IconHome: React.FC<SVG> = (props) => {
             style={{ ...style, fill: color, transition: 'fill 0.6s ease' }}
         >
             <title>{title}</title>
-            <path d="M18.672 11h-1.672v6c0 0.445-0.194 1-1 1h-4v-6h-4v6h-4c-0.806 0-1-0.555-1-1v-6h-1.672c-0.598 0-0.47-0.324-0.060-0.748l8.024-8.032c0.195-0.202 0.451-0.302 0.708-0.312 0.257 0.010 0.513 0.109 0.708 0.312l8.023 8.031c0.411 0.425 0.539 0.749-0.059 0.749z" />
+            <path d="M10 20c-5.523 0-10-4.477-10-10s4.477-10 10-10v0c5.523 0 10 4.477 10 10s-4.477 10-10 10v0zM11 15h1c1.657 0 3-1.343 3-3s-1.343-3-3-3v0h-4.010c-0.552 0-1-0.448-1-1s0.448-1 1-1v0h6.010v-2h-3v-2h-2v2h-1c-1.657 0-3 1.343-3 3s1.343 3 3 3v0h4c0.552 0 1 0.448 1 1s-0.448 1-1 1v0h-6v2h3v2h2v-2z" />
         </svg>
     );
 };

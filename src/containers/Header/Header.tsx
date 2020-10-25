@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Wrapper, ButtonsContainer, LogoContainer } from './Header.styled';
 import HeaderButton from '../../components/UI/Header/HeaderButton/HeaderButton';
+import { LogoHeader } from '../../assets';
 import { IconBell, IconCog, IconUser } from '../../icons';
 import HeaderSearch from '../../components/UI/Header/HeaderSearch/HeaderSearch';
 
@@ -23,7 +24,9 @@ const Header: React.FC = (props) => {
 
     return (
         <Wrapper>
-            <LogoContainer>Logo</LogoContainer>
+            <LogoContainer>
+                <img src={LogoHeader} alt={'Logo'} />
+            </LogoContainer>
             <HeaderSearch
                 changed={(event: React.ChangeEvent) =>
                     inputChangedHandler(event)

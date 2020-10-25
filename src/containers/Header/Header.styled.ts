@@ -13,8 +13,14 @@ export const Wrapper = styled.header`
 export const LogoContainer = styled.div`
     width: 15rem;
     height: 6rem;
-    background-color: #fff;
     margin: auto 0 auto 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > img {
+        width: 100%;
+    }
 `;
 
 export const ButtonsContainer = styled.div`

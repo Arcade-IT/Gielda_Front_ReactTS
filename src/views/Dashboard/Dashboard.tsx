@@ -3,10 +3,16 @@ import { connect, ConnectedProps } from 'react-redux';
 
 const Dashboard: React.FC<PropsFromRedux> = (props) => {
     const { tempLogin } = props;
+
+    const tempLogoutHandler = () => {
+        tempLogin();
+        localStorage.removeItem('loggedIn');
+    };
+
     return (
         <>
             Dashboard goes here.
-            <button onClick={tempLogin}>TEMP LOGIN</button>
+            <button onClick={tempLogoutHandler}>LOGOUT</button>
         </>
     );
 };
