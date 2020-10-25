@@ -10,7 +10,7 @@ import LoginImage from '../../components/UI/Login/LoginImage/LoginImage';
 import { connect, ConnectedProps } from 'react-redux';
 
 interface LoginProps {
-    clickedCancel(): void;
+    clickedCancel: () => void;
     isLogin?: boolean;
 }
 
@@ -192,7 +192,14 @@ const Login: React.FC<Props> = (props) => {
                 </CSSTransition>
                 {isLogin ? login : signup}
                 <Row>
-                    <LoginButton clicked={tempLogin}>Login</LoginButton>
+                    <LoginButton
+                        clicked={() => {
+                            tempLogin();
+                            clickedCancel();
+                        }}
+                    >
+                        Login
+                    </LoginButton>
                     <LoginButton clicked={clickedCancel}>Cancel</LoginButton>
                 </Row>
             </LoginContainer>

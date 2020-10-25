@@ -1,5 +1,10 @@
 import React, { useRef, useState } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Redirect
+} from 'react-router-dom';
 import { Main, Wrapper } from './MainLayout.styled';
 import { ThemeProvider } from 'styled-components';
 import { colorTheme, shadowTheme, transitionTheme } from '../../themes';
@@ -21,9 +26,9 @@ const MainLayout: React.FC<PropsFromRedux> = (props) => {
     const { loggedIn } = props;
 
     const {
+        app,
         landingPage,
         landingPageAbout,
-        landingPageApp,
         landingPageContact,
         landingPageServices
     } = routes;
@@ -60,7 +65,6 @@ const MainLayout: React.FC<PropsFromRedux> = (props) => {
             <Route exact path={landingPageAbout} component={About} />
             <Route exact path={landingPageServices} component={Services} />
             <Route exact path={landingPageContact} component={Home} />
-            <Route exact path={landingPageApp} component={Home} />
         </LandingPage>
     );
 
@@ -78,7 +82,20 @@ const MainLayout: React.FC<PropsFromRedux> = (props) => {
                                             isLogin={isModalLogin}
                                         />
                                     </Modal>
-                                    {loggedIn ? loggedInView : loggedOutView}
+                                    <Route exact path={landingPage}>
+                                        {loggedIn ? (
+                                            <Redirect to={app} />
+                                        ) : (
+                                            loggedOutView
+                                        )}
+                                    </Route>
+                                    <Route exact path={app}>
+                                        {loggedIn ? (
+                                            loggedInView
+                                        ) : (
+                                            <Redirect to={landingPage} />
+                                        )}
+                                    </Route>
                                 </Wrapper>
                             </Switch>
                         </Router>
