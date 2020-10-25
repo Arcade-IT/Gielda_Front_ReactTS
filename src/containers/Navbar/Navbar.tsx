@@ -44,16 +44,16 @@ const Navbar: React.FC<Props> = (props) => {
                         <NavLink to="/">Home</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/landingPage/about">About</NavLink>
+                        <NavLink to="/about">About</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/landingPage/services">Services</NavLink>
+                        <NavLink to="/services">Services</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/landingPage/app">App</NavLink>
+                        <NavLink to="/app">App</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/landingPage/contact">Contact</NavLink>
+                        <NavLink to="/contact">Contact</NavLink>
                     </NavItem>
                     <NavItemLogin onClick={() => toggleLogin(true)}>
                         Login

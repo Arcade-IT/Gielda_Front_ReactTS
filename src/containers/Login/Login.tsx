@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Wrapper, Row, Warning, LoginContainer, Text } from './Login.styled';
 import { CSSTransition } from 'react-transition-group';
 import LoginButton from '../../components/UI/Login/LoginButton/LoginButton';
@@ -10,7 +10,7 @@ import LoginImage from '../../components/UI/Login/LoginImage/LoginImage';
 import { connect, ConnectedProps } from 'react-redux';
 
 interface LoginProps {
-    clickedCancel(): void;
+    clickedCancel: () => void;
     isLogin?: boolean;
 }
 
@@ -32,6 +32,12 @@ const Login: React.FC<Props> = (props) => {
         shown: false,
         message: ' '
     });
+
+    useEffect(() => {
+        if (localStorage.getItem('loggedIn') === 'true') {
+            tempLogin();
+        }
+    }, []);
 
     const validateEmail = (email: string) => {
         const pattern = /\S+@\S+\.\S+/;
@@ -176,6 +182,12 @@ const Login: React.FC<Props> = (props) => {
 
     const nodeRef = useRef(null);
 
+    const tempLoginHandler = () => {
+        tempLogin();
+        clickedCancel();
+        localStorage.setItem('loggedIn', 'true');
+    };
+
     return (
         <Wrapper>
             <LoginImage />
@@ -192,7 +204,7 @@ const Login: React.FC<Props> = (props) => {
                 </CSSTransition>
                 {isLogin ? login : signup}
                 <Row>
-                    <LoginButton clicked={tempLogin}>Login</LoginButton>
+                    <LoginButton clicked={tempLoginHandler}>Login</LoginButton>
                     <LoginButton clicked={clickedCancel}>Cancel</LoginButton>
                 </Row>
             </LoginContainer>

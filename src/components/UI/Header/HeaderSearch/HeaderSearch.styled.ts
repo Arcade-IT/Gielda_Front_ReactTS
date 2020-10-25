@@ -24,7 +24,8 @@ export const SearchInput = styled.input`
     }
 
     &:active,
-    &:focus {
+    &:focus,
+    &:hover {
         background-color: ${(props) => props.theme.primaryLighter};
 
         &::placeholder {
@@ -36,7 +37,6 @@ export const SearchInput = styled.input`
 export const Icon = styled.i`
     position: absolute;
     font-size: 1.6rem;
-    min-width: 5rem;
     padding: 0.7rem;
     color: ${(props) => props.theme.primaryLightest};
 `;
