@@ -14,7 +14,7 @@ import Login from '../../containers/Login/Login';
 import Dashboard from '../../views/Dashboard/Dashboard';
 import { useOutsideClick } from '../../hooks/useOutsideClick';
 import Header from '../../containers/Header/Header';
-import { About, Home, Services } from '../../components/LandingPage';
+import { About, Home, Services, Contact } from '../../components/LandingPage';
 import LandingPage from '../../views/Landing/Landing';
 import { routes } from '../../routes';
 import { connect, ConnectedProps } from 'react-redux';
@@ -64,7 +64,7 @@ const MainLayout: React.FC<PropsFromRedux> = (props) => {
             <Route exact path={landingPage} component={Home} />
             <Route exact path={landingPageAbout} component={About} />
             <Route exact path={landingPageServices} component={Services} />
-            <Route exact path={landingPageContact} component={Home} />
+            <Route exact path={landingPageContact} component={Contact} />
         </LandingPage>
     );
 

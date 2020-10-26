@@ -7,3 +7,5 @@ export { IconBook } from './IconBook/IconBook';
 export { IconDollar } from './IconDollar/IconDollar';
 export { IconSwap } from './IconSwap/IconSwap';
 export { IconUnread } from './IconUnread/IconUnread';
+export { IconMail } from './IconMail/IconMail';
+export { SlackIcon } from './SlackIcon/SlackIcon';
