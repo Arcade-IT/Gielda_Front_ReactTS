@@ -46,6 +46,12 @@ export const RightContainer = styled.button<CardInterface>`
     box-shadow: ${(props) => props.theme.boxDark};
     border-radius: 15px;
     border: 1px solid ${(props) => props.theme.secondaryDark};
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 2rem;
+
     &:hover {
         z-index: 10;
     }
@@ -138,4 +144,66 @@ export const IconButtonTitle = styled.p`
     padding-left: 1rem;
 `;
 
-//
+//Right Container
+
+export const Title = styled.p`
+    color: ${(props) => props.theme.primaryLightest};
+    font-size: 3rem;
+`;
+
+export const Subtitle = styled.p`
+    color: ${(props) => props.theme.primaryLightest};
+    font-size: 2.5rem;
+`;
+
+export const Input = styled.input`
+    margin-top: 1rem;
+    color: ${(props) => props.theme.primaryLightest};
+    padding: 2rem 2.5rem;
+    width: 50%;
+    background-color: transparent;
+    border: 1px solid ${(props) => props.theme.secondaryDark};
+    border-radius: 1rem;
+    height: 3rem;
+`;
+
+export const InputMessage = styled.textarea`
+    margin-top: 1rem;
+    color: ${(props) => props.theme.primaryLightest};
+    padding: 1rem 1.5rem;
+    width: 50%;
+    background-color: transparent;
+    border: 1px solid ${(props) => props.theme.secondaryDark};
+    border-radius: 1rem;
+    height: 10rem;
+    resize: none;
+`;
+
+export const ButtonSendMessage = styled.button`
+    background-color: ${(props) => props.theme.secondaryDark};
+    position: relative;
+    width: 20rem;
+    color: ${(props) => props.theme.primaryLightest};
+    font-size: 2rem;
+    font-weight: 900;
+    text-decoration: none;
+    border: none;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem 1.1rem;
+    margin: 2rem 0;
+
+    @media screen and (max-width: 900px) {
+        width: 100%;
+    }
+
+    &:hover {
+        background-color: ${(props) => props.theme.secondaryDark};
+        transform: translateY(-0.2rem);
+    }
+    &:active {
+        position: relative;
+        opacity: 1;
+        transform: scale(1.02);
+    }
+`;
