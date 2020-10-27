@@ -6,7 +6,7 @@ export const SlackIcon: React.FC<SVG> = (props) => {
     return (
         <svg
             id="Capa_1"
-            enable-background="new 0 0 512 512"
+            enableBackground="new 0 0 512 512"
             height={size}
             viewBox="0 0 512 512"
             width={size}

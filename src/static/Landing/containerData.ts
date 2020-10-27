@@ -23,7 +23,7 @@ export const containerData: DataTypes[] = [
         subtitle: ' About us ',
         description:
             'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
-        link: '/landingPage/about',
+        link: '/about',
         buttonTitle: 'Read about us'
     },
     {
@@ -32,7 +32,7 @@ export const containerData: DataTypes[] = [
         subtitle: ' services ',
         description:
             'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
-        link: '/landingPage/services',
+        link: '/services',
         buttonTitle: 'Learn about our services'
     },
     {
@@ -41,7 +41,7 @@ export const containerData: DataTypes[] = [
         subtitle: ' App ',
         description:
             'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
-        link: '/landingPage/app',
+        link: '/app',
         buttonTitle: 'Our Apps'
     },
     {
@@ -50,7 +50,7 @@ export const containerData: DataTypes[] = [
         subtitle: ' Contact ',
         description:
             'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
-        link: '/landingPage/contact',
+        link: '/contact',
         buttonTitle: 'Contact us'
     },
     {
@@ -59,7 +59,7 @@ export const containerData: DataTypes[] = [
         subtitle: ' More info ',
         description:
             'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
-        link: '/landingPage/info',
+        link: '/info',
         buttonTitle: 'Read more info'
     }
 ];

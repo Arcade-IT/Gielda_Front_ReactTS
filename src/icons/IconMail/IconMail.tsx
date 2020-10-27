@@ -11,16 +11,16 @@ export const IconMail: React.FC<SVG> = (props) => {
             width={size}
             height={size}
             viewBox="0 0 24 24"
-            enable-background="new 0 0 24 24"
+            enableBackground="new 0 0 24 24"
         >
             <g id={title}>
                 <g>
                     <line
                         fill={color}
                         stroke={color}
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-miterlimit="10"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeMiterlimit="10"
                         x1="0.5"
                         y1="15.5"
                         x2="5.5"
@@ -30,9 +30,9 @@ export const IconMail: React.FC<SVG> = (props) => {
                     <line
                         fill="none"
                         stroke={color}
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-miterlimit="10"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeMiterlimit="10"
                         x1="2.5"
                         y1="12.5"
                         x2="6"
@@ -42,9 +42,9 @@ export const IconMail: React.FC<SVG> = (props) => {
                     <line
                         fill="none"
                         stroke={color}
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-miterlimit="10"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeMiterlimit="10"
                         x1="4.5"
                         y1="9.5"
                         x2="6.5"
@@ -53,18 +53,18 @@ export const IconMail: React.FC<SVG> = (props) => {
                     <polygon
                         fill="none"
                         stroke={color}
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-miterlimit="10"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeMiterlimit="10"
                         points="22.5,17.5 
 			7.5,17.5 8.5,7.5 23.5,7.5 		"
                     />
                     <polyline
                         fill="none"
                         stroke={color}
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-miterlimit="10"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeMiterlimit="10"
                         points="8.5,7.5 
 			16,13.5 23.5,7.5 		"
                     />

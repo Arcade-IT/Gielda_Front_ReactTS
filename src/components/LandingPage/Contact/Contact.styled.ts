@@ -5,9 +5,8 @@ export const MainContainer = styled.div`
     width: 100%;
     height: 100%;
     color: ${(props) => props.theme.primaryLightest};
-    padding: 2rem;
+    padding: 8rem 12rem;
     display: flex;
-    position: relative;
 `;
 
 interface CardInterface {
@@ -15,15 +14,15 @@ interface CardInterface {
 }
 
 export const LeftContainer = styled.button<CardInterface>`
-    position: absolute;
+    flex: 4;
     top: 5rem;
     left: 10rem;
     width: 50%;
-    height: 60%;
+    height: 100%;
     border: none;
     z-index: 2;
     border: 1px solid ${(props) => props.theme.secondaryDark};
-    border-radius: 15px;
+    border-radius: 15px 0 0 15px;
     background-color: ${(props) => props.theme.primaryLighter};
     box-shadow: ${(props) => props.theme.boxDark};
     display: flex;
@@ -35,22 +34,23 @@ export const LeftContainer = styled.button<CardInterface>`
         z-index: 10;
     }
 `;
-export const RightContainer = styled.button<CardInterface>`
-    position: absolute;
+export const RightContainer = styled.form<CardInterface>`
+    flex: 2;
     bottom: 5rem;
     right: 10rem;
-    height: 60%;
-    width: 40%;
+    height: 100%;
+    width: 60%;
     background-color: ${(props) => props.theme.primaryMedium};
     z-index: ${(props) => (props.clicked ? 1 : 2)};
     box-shadow: ${(props) => props.theme.boxDark};
-    border-radius: 15px;
+    border-radius: 0 15px 15px 0;
     border: 1px solid ${(props) => props.theme.secondaryDark};
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
     padding: 2rem;
+    box-shadow: ${(props) => props.theme.boxDark}
 
     &:hover {
         z-index: 10;
@@ -60,15 +60,18 @@ export const RightContainer = styled.button<CardInterface>`
 //Left Container
 
 export const ImageContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50%;
     height: 80%;
     border-right: 1px solid ${(props) => props.theme.secondaryDark};
+    padding: 1rem;
 `;
 
 export const Image = styled.img`
     width: 100%;
     height: auto;
-    padding: 5rem;
 `;
 
 export const TextPane = styled.div`
@@ -160,7 +163,7 @@ export const Input = styled.input`
     margin-top: 1rem;
     color: ${(props) => props.theme.primaryLightest};
     padding: 2rem 2.5rem;
-    width: 50%;
+    width: 60%;
     background-color: transparent;
     border: 1px solid ${(props) => props.theme.secondaryDark};
     border-radius: 1rem;
@@ -171,7 +174,7 @@ export const InputMessage = styled.textarea`
     margin-top: 1rem;
     color: ${(props) => props.theme.primaryLightest};
     padding: 1rem 1.5rem;
-    width: 50%;
+    width: 60%;
     background-color: transparent;
     border: 1px solid ${(props) => props.theme.secondaryDark};
     border-radius: 1rem;
